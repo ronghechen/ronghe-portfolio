@@ -9,49 +9,35 @@ function TransparentFooter() {
     <footer className="footer">
       <Container>
         <nav>
-          <ul>
+          <ul style={{ textTransform: "none" }}>
             <li>
               <a
-                href="https://www.creative-tim.com?ref=nukr-transparent-footer"
+                href="https://www.linkedin.com/in/ronghe-chen/"
                 target="_blank"
               >
-                Creative Tim
+                linkedin
               </a>
             </li>
             <li>
               <a
-                href="http://presentation.creative-tim.com?ref=nukr-transparent-footer"
+                href="https://github.com/ronghechen"
                 target="_blank"
               >
-                About Us
+                github
               </a>
             </li>
             <li>
               <a
-                href="http://blog.creative-tim.com?ref=nukr-transparent-footer"
+                href="mailto:ronghechen2027@u.northwestern.edu"
                 target="_blank"
               >
-                Blog
+                email
               </a>
             </li>
           </ul>
         </nav>
         <div className="copyright" id="copyright">
-          © {new Date().getFullYear()}, Designed by{" "}
-          <a
-            href="https://www.invisionapp.com?ref=nukr-transparent-footer"
-            target="_blank"
-          >
-            Invision
-          </a>
-          . Coded by{" "}
-          <a
-            href="https://www.creative-tim.com?ref=nukr-transparent-footer"
-            target="_blank"
-          >
-            Creative Tim
-          </a>
-          .
+          © 2025 ronghe chen ⋆୨୧˚⋆ ˚
         </div>
       </Container>
     </footer>

@@ -27,7 +27,6 @@ h1, .h1 {
 
     small{
         font-weight: $font-weight-bold;
-        text-transform: uppercase;
         opacity: .8;
     }
 }
@@ -62,8 +61,6 @@ h5, .h5 {
 }
 h6, .h6{
     font-size: $font-size-h6;
-    font-weight: $font-weight-bold;
-    text-transform: uppercase;
 }
 p{
     line-height: 1.61em;
@@ -77,7 +74,6 @@ p{
 
 
     &.title-up{
-        text-transform: uppercase;
 
         a{
             color: $black-color;
@@ -96,7 +92,6 @@ p{
     font-weight: $font-weight-light;
 }
 .category{
-    text-transform: capitalize;
     font-weight: $font-weight-bold;
     color: $dark-gray;
 }
@@ -129,7 +124,6 @@ p{
     small{
         color: $default-color;
         font-size: $font-size-small;
-        text-transform: uppercase;
     }
 
     &.blockquote-primary{

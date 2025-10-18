@@ -159,11 +159,6 @@ function ProfilePage() {
                         <img
                           alt="..."
                           className="img-raised"
-                          src={require("assets/img/bg6.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
                           src={require("assets/img/bg11.jpg")}
                         ></img>
                       </Col>
@@ -202,11 +197,6 @@ function ProfilePage() {
                           alt="..."
                           className="img-raised"
                           src={require("assets/img/bg7.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg6.jpg")}
                         ></img>
                       </Col>
                     </Row>

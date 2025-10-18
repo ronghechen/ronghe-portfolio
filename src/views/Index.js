@@ -7,7 +7,7 @@ import React from "react";
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import IndexHeader from "components/Headers/IndexHeader.js";
-import DarkFooter from "components/Footers/DarkFooter.js";
+import TransparentFooter from "components/Footers/TransparentFooter.js";
 
 // sections for this page
 import Images from "./index-sections/Images.js";
@@ -45,20 +45,9 @@ function Index() {
         <div className="main">
           <Images />
           <BasicElements />
-          <Navbars />
-          <Tabs />
           <Pagination />
-          <Notifications />
-          <Typography />
-          <Javascript />
-          <Carousel />
-          <NucleoIcons />
-          <CompleteExamples />
-          <SignUp />
-          <Examples />
-          <Download />
         </div>
-        <DarkFooter />
+        <TransparentFooter />
       </div>
     </>
   );

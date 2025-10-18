@@ -1,0 +1,25 @@
+.project-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.25));
+    transition: all 0.4s ease;
+  
+    &:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 12px 25px rgba(0, 0, 0, 0.35)) brightness(1.1);
+      cursor: pointer;
+    }
+  }
+  
+  .project-img:hover {
+    animation: float 2s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% { transform: scale(1.05) translateY(0px); }
+    50% { transform: scale(1.05) translateY(-6px); }
+    100% { transform: scale(1.05) translateY(0px); }
+  }
