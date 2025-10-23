@@ -1,0 +1,39 @@
+.workflow-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 2rem auto;
+    text-align: center;
+  }
+  
+  .workflow-box {
+    background-color: #5927FF;           
+    color: white;
+    padding: 0.8rem 1.4rem;
+    border-radius: 12px;                
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+  }
+  
+  
+  .workflow-arrow {
+    font-size: 2rem;
+    color: #5927FF;
+    user-select: none;
+  }
+  
+  @media (max-width: 768px) {
+    .workflow-container {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .workflow-arrow {
+      transform: rotate(90deg);
+    }
+  }
+  
