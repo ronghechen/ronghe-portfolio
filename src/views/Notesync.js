@@ -50,7 +50,7 @@ function Notesync() {
                 <p>for my software studio class, my group & i created this website called notesync, a website that serves as a live music calendar where users can add and view events in their area. our team consisted of 4 full-stack developers, although we all contributed across the stack, i specialized in front-end architecture, accessibility, and geolocation-based event filtering — bridging ui/ux design with backend functionality. notesync is created in ruby on rails, and deployed using heroku.</p>
               </Col>
               <Col className="ml-auto mr-auto text-center" md="6" style={{ marginTop: "-40px"}}>
-              <img src={require("assets/img/techstack.png")} alt="Tech Stack" width="400"/>
+              <img src={require("assets/img/techstack.png")} alt="Tech Stack" className="project-img"/>
               </Col>
             </Row>
             <h3 style={{ marginTop: "-40px"}}>challenges</h3>
@@ -75,12 +75,12 @@ function Notesync() {
                 <p>in addition to my full-stack software engineering skills, working on notesync also helped me hone my ui/ux skills, teaching me how to design with empathy. i ran the words on our website through an understandability checker to check that all terminology used was understandable for the average person and also made sure that the text sizes were responsive so that people with vision impairments could zoom in and the text size would change accordingly - making our product accessible for a wider audience.</p>
               </Col>
               <Col className="ml-auto mr-auto text-center" md="6" style={{ marginTop: "-40px"}}>
-              <img src={require("assets/img/uiux.png")} alt="Tech Stack" width="400"/>
+              <img src={require("assets/img/uiux.png")} alt="Tech Stack" className="project-img"/>
               </Col>
             </Row>
             <Row style={{ marginTop: "40px"}}>
               <Col className="ml-auto mr-auto text-center" md="6" style={{ marginTop: "-40px"}}>
-              <img src={require("assets/img/agile.png")} alt="Tech Stack" width="400"/>
+              <img src={require("assets/img/agile.png")} alt="Tech Stack" width="400" className="project-img"/>
               </Col>
               <Col className="ml-auto mr-auto text-left" md="6" style={{ marginTop: "40px"}}>
                 <p>i also noticed that i really like using agile methodology, since it helps break down a large, daunting project into smaller, manageable chunks. sometimes, when i struggled with theory classes, i wondered if cs was for me, but this project made me realize that i like the practical and creative side of cs. i now feel more confident navigating the full stack, and i’m excited to keep building that foundation. i want to pursue a career in ui/ux design or software engineering - one where i can bridge the gap between design and implementation.</p>
