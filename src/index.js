@@ -15,6 +15,7 @@ import LoginPage from "views/examples/LoginPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import Portfolio from "views/Portfolio.js";
 import Echolab from "views/Echolab.js";
+import Notesync from "views/Notesync";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -25,6 +26,7 @@ ReactDOM.render(
       <Route path="/login-page" element={<LoginPage />} />
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/echolab" element={<Echolab />} />
+      <Route path="/notesync" element={<Notesync />} />
       <Route path="*" element={<Navigate to="/index" replace />} />
     </Routes>
   </BrowserRouter>,
