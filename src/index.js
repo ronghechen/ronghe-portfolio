@@ -17,6 +17,7 @@ import Portfolio from "views/Portfolio.js";
 import Echolab from "views/Echolab.js";
 import Notesync from "views/Notesync.js";
 import Raiso from "views/Raiso.js";
+import TransportApp from "views/TransportApp.js";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -29,6 +30,7 @@ ReactDOM.render(
       <Route path="/echolab" element={<Echolab />} />
       <Route path="/notesync" element={<Notesync />} />
       <Route path="/raiso" element={<Raiso />} />
+      <Route path="/nu-transport-app" element={<TransportApp />} />
       <Route path="*" element={<Navigate to="/index" replace />} />
     </Routes>
   </BrowserRouter>,
