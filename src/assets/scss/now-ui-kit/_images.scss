@@ -1,3 +1,4 @@
+/* Base image styles */
 img {
   max-width: 100%;
   border-radius: 1px;
@@ -7,17 +8,20 @@ img {
   box-shadow: $box-shadow-raised;
 }
 
+/* Hero heart (main image) */
 .hero-heart {
   width: 700px;
   filter: drop-shadow(0px 0px 25px rgba(255, 0, 90, 0.6));
   transition: transform 0.6s ease, filter 0.3s ease;
 }
 
+/* Decorative elements */
 .hero-star,
 .hero-sparkles {
   transition: transform 0.6s ease, filter 0.3s ease;
 }
 
+/* Hover effects */
 .section-images:hover .hero-star {
   transform: rotate(10deg) translate(20px, -10px);
   filter: drop-shadow(0px 0px 20px rgba(255, 255, 120, 0.8));
@@ -33,11 +37,14 @@ img {
   filter: drop-shadow(0px 0px 40px rgba(255, 0, 90, 0.8));
 }
 
+/* -------------------------- */
+/* 📱 Responsive adjustments  */
+/* -------------------------- */
 
-
+/* Tablets */
 @media (max-width: 992px) {
   .hero-heart {
-    width: 500px;
+    width: 550px;
   }
 
   .hero-star,
@@ -46,19 +53,23 @@ img {
   }
 }
 
-
+/* Phones */
 @media (max-width: 576px) {
   .hero-heart {
-    width: 90%; 
-    max-width: 400px;
+    width: 85%;
+    max-width: 350px; /* smaller heart on mobile */
   }
 
-  .hero-star,
+  .hero-star {
+    width: 28vw;
+    margin-top: 60px; /* push star down */
+  }
+
   .hero-sparkles {
-    width: 25vw; 
+    width: 24vw;
   }
 
-
+  /* Optional: reduce hover effects for smoother mobile UX */
   .section-images:hover .hero-heart,
   .section-images:hover .hero-star,
   .section-images:hover .hero-sparkles {
