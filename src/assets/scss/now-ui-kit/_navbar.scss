@@ -244,11 +244,11 @@
   }
   
   @media (max-width: 768px) {
-    .navbar.custom-navbar {
+    .navbar.fixed-top.custom-navbar {
       position: fixed;
       top: 0;
       left: 0;
-      top: -400px !important;
+      top: -40px !important;
       height: 100vh; /* full screen */
       width: 100vw;
       background-image: url("/assets/img/header.jpg");
