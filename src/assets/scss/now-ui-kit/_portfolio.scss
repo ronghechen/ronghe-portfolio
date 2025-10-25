@@ -79,4 +79,22 @@
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
   }
 
+  .revenue-leak-img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .revenue-leak-img {
+      max-width: 250px;
+      margin-top: 20px;
+    }
+  
+    .ml-auto.mr-auto.text-center {
+      margin-top: 0 !important;
+    }
+  }
+  
+
   

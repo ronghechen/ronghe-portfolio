@@ -51,7 +51,7 @@ function Echolab() {
             <p>but the challenge wasn't just onboarding itself - it was that product teams were overwhelmed by raw feedback, struggling what to prioritize, and how to turn those insights into experiments. this reflects a broader industry problem: most customer feedback never makes it into roadmaps, and latency between feedback and action creates a “revenue leak”.</p>
               </Col>
               <Col className="ml-auto mr-auto text-center" md="6" style={{ marginTop: "-100px"}}>
-              <img src={require("assets/img/revenueleak.png")} alt="Revenue Leak" width="400"/>
+              <img src={require("assets/img/revenueleak.png")} alt="Revenue Leak" className="img-fluid revenue-leak-img"/>
               </Col>
             </Row>
             <h3>from pain points to hypotheses</h3>
