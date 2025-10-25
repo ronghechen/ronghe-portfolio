@@ -47,7 +47,7 @@ function Raiso() {
             <p>the responsible use of ai student organization (raiso) is an organization dedicated to educating students about the societal impacts of artificial intelligence, hosting programs that promote the discussion of societal and ethical implications of technology. sometimes, raiso holds events and invites ai researchers and designers to talk about their work and their views on the future of ai, and raiso also hosts workshops where students can build ai/ml projects.</p>
             </Col>
             <Col md="6" style={{ marginTop: "-140px"}}>
-                <img src={require("assets/img/ai.png")} alt="AI" className="project-img"/>
+                <img src={require("assets/img/ai.png")} alt="AI" className="ai-img"/>
                   <div
                     className="image-container"
                     style={{

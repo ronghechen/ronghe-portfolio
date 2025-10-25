@@ -96,5 +96,44 @@
     }
   }
   
-
+  .ai-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.25));
+    transition: all 0.4s ease;
+  }
+  
+  .ai-img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 12px 25px rgba(0, 0, 0, 0.35)) brightness(1.1);
+    cursor: pointer;
+    animation: float 2s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .ai-img {
+      max-width: 250px;
+      margin-top: 70px;
+    }
+  
+    .text-center.col-md-6 {
+      margin-top: 0 !important;
+    }
+  }
+  
   
