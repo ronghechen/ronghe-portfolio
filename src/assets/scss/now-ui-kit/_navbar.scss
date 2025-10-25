@@ -299,6 +299,7 @@
   }*/
 
   @media (max-width: 768px) {
+    /* Navbar background + layout */
     .navbar.custom-navbar {
       background-image: url("/assets/img/header.jpg");
       background-size: cover;
@@ -314,22 +315,34 @@
       box-shadow: none;
     }
   
-    /* Make sure the collapse dropdown appears below navbar */
+    /* Remove Reactstrap default blue collapse background */
     .navbar-collapse {
+      background: transparent !important;
+      box-shadow: none !important;
+      border: none !important;
       position: absolute;
-      top: 100%; /* directly below navbar */
+      top: 100%; /* right below navbar */
       left: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.7); /* subtle transparent overlay */
-      padding: 1rem 0;
-      text-align: center;
-      border-radius: 0 0 8px 8px;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 0;
     }
   
+    /* Make nav items horizontal */
+    .navbar-nav {
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: center;
+      width: 100%;
+    }
+  
+    /* Style nav links */
     .navbar-nav .nav-link p {
       font-size: 1.1rem;
       color: white !important;
-      margin: 0.75rem 0;
+      margin: 0 1rem;
       text-transform: none;
     }
   
@@ -345,10 +358,16 @@
       right: 1.25rem;
     }
   
+    /* Make sure the dropdown doesn't mess with layout */
+    .navbar-collapse[style] {
+      background: transparent !important;
+    }
+  
     body.nav-open {
       overflow: auto !important;
     }
   }
+  
   
   @media (max-width: 480px) {
     .navbar.custom-navbar {
