@@ -214,3 +214,114 @@
     pointer-events: none !important;
     box-shadow: none !important;
   }
+
+  .navbar.custom-navbar {
+    background-image: url("/assets/img/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-color 0.3s ease, opacity 0.5s ease, transform 0.5s ease !important;
+    color: $white-color;
+    z-index: 1050;
+  }
+  
+  .navbar.navbar-transparent.custom-navbar {
+    background-color: transparent !important;
+    background-image: none;
+  }
+  
+  .navbar.custom-navbar.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  .navbar.custom-navbar.hidden {
+    opacity: 0 !important;
+    transform: translateY(-50px) !important;
+    pointer-events: none !important;
+    box-shadow: none !important;
+  }
+  
+  @media (max-width: 992px) {
+    .navbar.custom-navbar {
+      background-image: url("/assets/img/header.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  
+    .navbar-nav .nav-link p {
+      font-size: 1rem;
+    }
+  
+    .navbar-brand {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar.custom-navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh; // full screen
+      width: 100vw;
+      background-image: url("/assets/img/header.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0;
+      box-shadow: none;
+    }
+  
+    .navbar-collapse {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); 
+    }
+  
+    .navbar-nav .nav-link p {
+      font-size: 1.3rem;
+      text-transform: none;
+      color: $white-color;
+      margin: 1rem 0;
+    }
+  
+    .navbar-brand {
+      color: $white-color !important;
+      font-size: 1.5rem;
+      text-transform: lowercase;
+      margin-bottom: 2rem;
+    }
+  
+    .navbar-toggler {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+  
+    body.nav-open {
+      overflow: hidden; // prevent scroll when menu open
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar.custom-navbar {
+      background-position: top center;
+    }
+  
+    .navbar-nav .nav-link p {
+      font-size: 1.1rem;
+    }
+  
+    .navbar-brand {
+      font-size: 1.3rem;
+    }
+  }
