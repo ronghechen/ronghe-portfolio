@@ -100,16 +100,18 @@ function Raiso() {
                   <li>has never heard of raiso</li>
                   <li>says they are "not too involved in clubs on campus"</li>
                   <li>would be interested in joining</li>
+                  <li>the first thing that they would click on → about page</li>
                 </ul>
             </Col>
             </Row>
             <Row>
             <Col className="ml-auto mr-auto text-left" md="6" style={{ marginTop: "180px"}}>
-                <h5>person 1</h5>
+                <h5>person 2</h5>
                 <ul>
-                  <li>has never heard of raiso</li>
-                  <li>says they are "not too involved in clubs on campus"</li>
+                  <li>has heard of raiso, but doesn't know much about it</li>
+                  <li>interested in ai and would love to attend discussions and workshops, especially since "ai is becoming such a big part of our lives"</li>
                   <li>would be interested in joining</li>
+                  <li>the first thing that they would click on → upcoming events and workshops (i.e. projects)</li>
                 </ul>
             </Col>
             <Col md="6">
