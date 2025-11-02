@@ -29,13 +29,13 @@ function IndexNavbar() {
       }`}
     >
       <Container className="d-flex justify-content-between align-items-center">
-        <NavbarBrand href="/index" id="navbar-brand">
+        <NavbarBrand href="/index" id="navbar-brand" className="navbar-text">
           ronghe chen
         </NavbarBrand>
         <Nav className="ml-auto d-flex flex-row align-items-center">
           <NavItem>
             <NavLink href="/portfolio">
-              <p style={{ textTransform: "none" }}>portfolio</p>
+              <p className="navbar-text">portfolio</p>
             </NavLink>
           </NavItem>
           <NavItem>
@@ -44,7 +44,7 @@ function IndexNavbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <p style={{ textTransform: "none" }}>resume</p>
+              <p className="navbar-text">resume</p>
             </NavLink>
           </NavItem>
         </Nav>

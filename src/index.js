@@ -1,14 +1,17 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+// React / Router
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
-// styles for this kit
+// Global styles
+import "bootstrap/dist/css/bootstrap.min.css";
 import "assets/css/bootstrap.min.css";
 import "assets/scss/now-ui-kit.scss?v=1.5.0";
 import "assets/demo/demo.css?v=1.5.0";
 import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
-// pages for this kit
+
+import withPageLoader from "components/withPageLoader";
+
 import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
@@ -19,18 +22,28 @@ import Notesync from "views/Notesync.js";
 import Raiso from "views/Raiso.js";
 import TransportApp from "views/TransportApp.js";
 
+const pages = {
+  "/index": Index,
+  "/nucleo-icons": NucleoIcons,
+  "/profile-page": ProfilePage,
+  "/login-page": LoginPage,
+  "/portfolio": Portfolio,
+  "/echolab": Echolab,
+  "/notesync": Notesync,
+  "/raiso": Raiso,
+  "/nu-transport-app": TransportApp,
+};
+
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/index" element={<Index />} />
-      <Route path="/nucleo-icons" element={<NucleoIcons />} />
-      <Route path="/profile-page" element={<ProfilePage />} />
-      <Route path="/login-page" element={<LoginPage />} />
-      <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="/echolab" element={<Echolab />} />
-      <Route path="/notesync" element={<Notesync />} />
-      <Route path="/raiso" element={<Raiso />} />
-      <Route path="/nu-transport-app" element={<TransportApp />} />
+      {Object.entries(pages).map(([path, Component]) => (
+        <Route
+          key={path}
+          path={path}
+          element={React.createElement(withPageLoader(Component))}
+        />
+      ))}
       <Route path="*" element={<Navigate to="/index" replace />} />
     </Routes>
   </BrowserRouter>,

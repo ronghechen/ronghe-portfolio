@@ -48,7 +48,7 @@ function Portfolio() {
                 <Button
                     outline
                     color="dark"
-                    style={{ backgroundColor: "transparent", border: "1px solid black", color: "black" }}
+                    className="custom-btn"
                     href="/echolab"
                     >
                     view project
@@ -85,7 +85,7 @@ function Portfolio() {
                 <Button
                     outline
                     color="dark"
-                    style={{ backgroundColor: "transparent", border: "1px solid black", color: "black" }}
+                    className="custom-btn"
                     href="/notesync"
                     >
                     view project
@@ -103,7 +103,7 @@ function Portfolio() {
                 <Button
                     outline
                     color="dark"
-                    style={{ backgroundColor: "transparent", border: "1px solid black", color: "black" }}
+                    className="custom-btn"
                     href="/raiso"
                     >
                     view project
@@ -140,7 +140,7 @@ function Portfolio() {
                 <Button
                     outline
                     color="dark"
-                    style={{ backgroundColor: "transparent", border: "1px solid black", color: "black" }}
+                    className="custom-btn"
                     href="https://travelwithronghe.netlify.app/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -159,7 +159,7 @@ function Portfolio() {
                 <Button
                     outline
                     color="dark"
-                    style={{ backgroundColor: "transparent", border: "1px solid black", color: "black" }}
+                    className="custom-btn"
                     href="/nu-transport-app"
                     >
                     view project
