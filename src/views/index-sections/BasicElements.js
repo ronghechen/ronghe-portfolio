@@ -12,7 +12,7 @@ function BasicElements() {
         <Container>
           <h3 className="title">˚｡⋆୨୧˚about me</h3>
           <p style={{ maxWidth: "1500px", marginTop: "30px" }}>
-            hi! my name is ronghe (she/her) and i'm passionate about the intersection between design and technology. as a junior at northwestern's mccormick school of engineering pursuing a bs in computer science and a ba in psychology with a segal design certificate, i design and develop products that are creative, intuitive, and appeal to user needs.
+            hi! my name is ronghe (she/her) and i'm passionate about the intersection between design and technology. as a junior at northwestern's mccormick school of engineering pursuing a bs in computer science (with a concentration in software engineering), a minor in psychology, and a segal design certificate, i design and develop products that are creative, intuitive, and appeal to user needs.
           </p>
           <p style={{ maxWidth: "1500px", marginTop: "30px" }}>
             growing up, i discovered my love for creative coding from scratch, a programming language and online community where i created video games, art, and animations. i discovered my passion for product design years later - freshman year of college, where i designed prototypes for the website of raiso (responsible use of ai student organization). 
