@@ -33,7 +33,7 @@ function RaisoHeader() {
         ></div>
         <div className="content-center">
           <Container>
-            <h3>:･ﾟ✧ raiso :･ﾟ✧</h3>
+            <h3>:･ﾟ✧ misc design work :･ﾟ✧</h3>
           </Container>
         </div>
       </div>

@@ -94,23 +94,22 @@ function Portfolio() {
             </Row>
             <Row>
             <Col className="ml-auto mr-auto text-right" md="6" style={{ marginTop: "100px"}}>
-                <h3>raiso</h3>
-                <h4>ux design</h4>
+                <h3>wandering skies</h3>
+                <h4>software engineering</h4>
                 <p>
-                the responsible use of ai student organization at northwestern (raiso) is an ai ethics org on campus that hosts discussions and workshops.
-                when i was a web developer on the raiso website team, i was in charge of revamping the raiso website during winter/spring 2024.
+                wandering skies is an interactive sky scene built using javascript and webgl, deployed on vercel, customizing the ui with html/css. users can toggle between 3 times of day (day, sunset, night) and 2 different shading modes (phong, toon w/ purple tint).
                 </p>
                 <Button
                     outline
                     color="dark"
                     className="custom-btn"
-                    href="/raiso"
+                    href="https://wanderingskies.vercel.app/"
                     >
                     view project
                     </Button>
               </Col>
             <Col md="6">
-                <img src={require("assets/img/raiso.png")} alt="RAISO" className="project-img"/>
+                <img src={require("assets/img/wanderingskies.png")} alt="Wandering Skies" className="project-img"/>
                   <div
                     className="image-container"
                     style={{

@@ -19,7 +19,6 @@ import ProfilePage from "views/examples/ProfilePage.js";
 import Portfolio from "views/Portfolio.js";
 import Echolab from "views/Echolab.js";
 import Notesync from "views/Notesync.js";
-import Raiso from "views/Raiso.js";
 import TransportApp from "views/TransportApp.js";
 
 const pages = {
@@ -30,7 +29,6 @@ const pages = {
   "/portfolio": Portfolio,
   "/echolab": Echolab,
   "/notesync": Notesync,
-  "/raiso": Raiso,
   "/nu-transport-app": TransportApp,
 };
 
