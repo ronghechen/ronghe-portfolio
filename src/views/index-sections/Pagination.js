@@ -28,7 +28,7 @@ function PaginationSection() {
               <h3 className="title">･ﾟ✧ tools & tech:</h3>
             </Col>
           </Row>
-          <p style = {{ maxWidth: "1500px"}}> ☆ react.js ☆ figma ☆ html/css/js ☆ ruby on rails ☆ python ☆ canva ☆ sql ☆ bootstrap ☆ tailwind css</p>
+          <p style = {{ maxWidth: "1500px"}}> ☆ react.js ☆ figma ☆ html/css/js ☆ ruby on rails ☆ python ☆ flask ☆ sql ☆ bootstrap ☆ tailwind css</p>
           <br></br>
         </Container>
       </div>
