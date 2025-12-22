@@ -15,10 +15,10 @@ function BasicElements() {
             hi! my name is ronghe (she/her) and i'm passionate about the intersection between design and technology. as a junior at northwestern's mccormick school of engineering pursuing a bs in computer science (with a concentration in software engineering), a minor in psychology, and a segal design certificate, i design and develop products that are creative, intuitive, and appeal to user needs.
           </p>
           <p style={{ maxWidth: "1500px", marginTop: "30px" }}>
-            with a tech background and keen interest in design, i love being able to speak both languages. as a designer, i'm drawn to complex systems where user trust and systems thinking are crucial. as an engineer, i love building user-facing products where design quality and ease of use matters.
+            with a tech background and strong interest in design, i thrive at the intersection of systems meets experience. as a designer, i'm drawn to complex products where clarity, trust, and thoughtful system feedback matter. as an engineer, i love building user-facing products where design quality and usability are central to the product.
           </p>
           <p style={{ maxWidth: "1500px", marginTop: "30px" }}>
-            whether i'm sketching flows or writing code, i love to make complex systems feel simple and great design feel real.
+            whether i'm sketching flows or writing code, i focus on making complex systems feel simple and turning great design into something real and usable.
           </p>
           <p style = {{ maxWidth: "1500px", marginTop: "30px" }}>things i love:</p>
           <ul style = {{ maxWidth: "1500px", marginTop: "30px" }}>
