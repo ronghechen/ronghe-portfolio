@@ -18,7 +18,12 @@ function BasicElements() {
             i am currently interning at openqquantify as a software engineer, building ai-powered web apps that provide medical compliance assistance. i am also involved in design, technology, and research (dtr), where i am starting a project called the experiential computing platform, an AI-powered platform that lets designers explore how different users experience a product across demographics, regions, and accessibility constraints.
           </p>
           <p style = {{ maxWidth: "1500px", marginTop: "30px" }}>last summer, i interned as an ai ui/ux designer at product manager accelerator, where i collaborated with pms, devs, and data scientists to launch echolab, an ai-powered b2b saas platform that turns customer feedback into a/b tests.</p>
-          <p style = {{ maxWidth: "1500px", marginTop: "30px" }}>while i'm not staying up until the am debugging at mudd, i enjoy doing pilates, designing graphics, and going to live music shows.</p>
+          <p style = {{ maxWidth: "1500px", marginTop: "30px" }}>things i love:</p>
+          <ul style = {{ maxWidth: "1500px", marginTop: "30px" }}>
+            <li>🧘‍♀️ doing pilates</li>
+            <li>🧋 iced coffee</li>
+            <li>💻 coding my own designs</li>
+          </ul>
         </Container>
       </div>
     </>
