@@ -15,9 +15,11 @@ function BasicElements() {
             hi! my name is ronghe (she/her) and i'm passionate about the intersection between design and technology. as a junior at northwestern's mccormick school of engineering pursuing a bs in computer science (with a concentration in software engineering), a minor in psychology, and a segal design certificate, i design and develop products that are creative, intuitive, and appeal to user needs.
           </p>
           <p style={{ maxWidth: "1500px", marginTop: "30px" }}>
-            i am currently interning at openqquantify as a software engineer, building ai-powered web apps that provide medical compliance assistance. i am also involved in design, technology, and research (dtr), where i am starting a project called the experiential computing platform, an AI-powered platform that lets designers explore how different users experience a product across demographics, regions, and accessibility constraints.
+            with a tech background and keen interest in design, i love being able to speak both languages. as a designer, i'm drawn to complex systems where user trust and systems thinking are crucial. as an engineer, i love building user-facing products where design quality and ease of use matters.
           </p>
-          <p style = {{ maxWidth: "1500px", marginTop: "30px" }}>last summer, i interned as an ai ui/ux designer at product manager accelerator, where i collaborated with pms, devs, and data scientists to launch echolab, an ai-powered b2b saas platform that turns customer feedback into a/b tests.</p>
+          <p style={{ maxWidth: "1500px", marginTop: "30px" }}>
+            whether i'm sketching flows or writing code, i love to make complex systems feel simple and great design feel real.
+          </p>
           <p style = {{ maxWidth: "1500px", marginTop: "30px" }}>things i love:</p>
           <ul style = {{ maxWidth: "1500px", marginTop: "30px" }}>
             <li>🧘‍♀️ doing pilates</li>

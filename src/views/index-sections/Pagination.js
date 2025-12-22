@@ -1,39 +1,46 @@
 import React from "react";
-
-// reactstrap components
 import {
-  Badge,
-  NavItem,
-  NavLink,
-  Nav,
-  Pagination,
-  PaginationItem,
-  PaginationLink,
-  Progress,
   Container,
   Row,
   Col,
+  Card,
+  CardBody,
 } from "reactstrap";
 
-// core components
-
-function PaginationSection() {
-  const [pills, setPills] = React.useState("2");
+function ExperienceSection() {
   return (
-    <>
-      <div className="section section-pagination">
-        <Container>
-          <Row style={{ marginTop: "-100px" }}>
-            <Col md="6">
-              <h3 className="title">･ﾟ✧ tools & tech:</h3>
-            </Col>
-          </Row>
-          <p style = {{ maxWidth: "1500px"}}> ☆ react.js ☆ figma ☆ html/css/js ☆ ruby on rails ☆ python ☆ flask ☆ sql ☆ bootstrap ☆ tailwind css</p>
-          <br></br>
-        </Container>
-      </div>
-    </>
+    <div className="section section-experience">
+      <Container>
+        <Row className="mb-4" style={{ marginTop: "-80px"}}>
+          <Col md="6" className="mb-3">
+            <Card className="experience-card h-100">
+              <CardBody>
+                <h4 className="title">･ﾟ✧ currently</h4>
+                <p>
+                  building a full-stack ai-powered web app that supports
+                  medical compliance and regulation workflows at{" "}
+                  <strong>openqquantify</strong>
+                </p>
+              </CardBody>
+            </Card>
+          </Col>
+
+          <Col md="6" className="mb-3">
+            <Card className="experience-card h-100">
+              <CardBody>
+                <h4 className="title">:･ﾟ☆ previously</h4>
+                <p>
+                  designed dashboards and ai workflows for{" "}
+                  <strong>echolab</strong> via {" "}
+                  <strong>product manager accelerator</strong>
+                </p>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 
-export default PaginationSection;
+export default ExperienceSection;

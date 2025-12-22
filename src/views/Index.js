@@ -45,7 +45,7 @@ function Index() {
         <div className="main">
           <Images />
           <BasicElements />
-          <Pagination />
+          <Pagination/>
         </div>
         <TransparentFooter />
       </div>

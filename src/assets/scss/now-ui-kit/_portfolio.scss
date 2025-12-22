@@ -96,21 +96,33 @@
     }
   }
   
-  .ai-img {
-    display: block;
-    margin: 0 auto;
-    max-width: 90%;
-    height: auto;
-    image-rendering: -webkit-optimize-contrast;
-    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.25));
-    transition: all 0.4s ease;
+  .experience-card {
+    border-radius: 16px;
+    background-color: #ffffff;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+    padding: 1rem 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
   }
   
-  .ai-img:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 12px 25px rgba(0, 0, 0, 0.35)) brightness(1.1);
-    cursor: pointer;
-    animation: float 2s ease-in-out infinite;
+  .experience-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  }
+  
+  .experience-card h4 {
+    margin-bottom: 0.75rem;
+  }
+  
+  .experience-card p {
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .experience-card {
+      padding: 1.25rem 1.5rem;
+    }
   }
   
   @keyframes float {
