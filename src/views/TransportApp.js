@@ -13,9 +13,10 @@ import TransportHeader from "components/Headers/TransportHeader.js";
 import TransparentFooter from "components/Footers/TransparentFooter";
 import InfoCardTransport from "./index-sections/InfoCardTransport.js";
 import TransportCarousel from './TransportCarousel.js';
-import PainpointImage from "assets/img/painpointpage.png";
+import PainToDesign from "./index-sections/PainToDesign.js";
+import FeaturesNotUsed from "./index-sections/FeaturesNotUsed.js";
 import PaperProto from "assets/img/paperprototype.png";
-import DesignProcess from "./index-sections/DesignProcess.js";
+import AffinityMap from "assets/img/affinitymap.png";
 
 function TransportApp() {
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -40,74 +41,49 @@ function TransportApp() {
           <Container>
             <InfoCardTransport/>
             <h3>background</h3>
-            <p>in an increasingly digital age, there are plenty of transportation apps on the market. some examples of which include tripshot, an app providing info about upcoming buses or trains, and NUTransit, an app that provides rides for northwestern students around campus. for my human-computer interaction class, i interviewed a classmate for a project where i designed an interface for a transportation app, finding out their needs and pain points in the process.</p>
+            <p>in an increasingly digital transportation ecosystem, students rely on multiple apps to navigate campus safely and efficiently. however, fragmented experiences and unclear system states can make already inconvenient travel feel stressful, especially at night.</p>
+            <p>for the scope of this project, i interviewed a northwestern student to understand how they navigate campus transportation and identify opportunities to improve clarity, reliability, and recovery when plans change.</p>
             <h3>research process</h3>
-            <p>for this project, i was tasked with interviewing a classmate about their transportation habits. i did this in the form of an unstructured interview, where i had a general list of questions that i wanted to ask but let the conversation guide itself. i found out, that at northwestern, they use the following forms of transport:</p>
+            <p>i conducted a 30-minute unstructured interview to explore my participant’s transportation habits, motivations, and frustrations. i chose an unstructured format to allow unexpected themes, including responses to uncertainty, to emerge naturally. i found out that the participant regularly used two transportation services:</p>
             <ul>
               <li>bus</li>
               <ul>
-                <li>uses an app called tripshot</li>
-                <li>buses on campus don’t really come in early hours, moreso in afternoon/evening</li>
-                <li>probably it’s free for us students and there’s more of an incentive to use transportation when it’s later/darker out</li>
-                <li>interviewee wishes it operated during earlier hours</li>
+                <li>uses an app called tripshot for public transit</li>
               </ul>
               <li>NUTransit</li>
-              <ul>
-                <li>can't use the app until 7 pm</li>
-                <li>they find this policy pretty reasonable, because not many drivers + free for students</li>
-              </ul>
             </ul>
-            <Row>
-            <Col className="ml-auto mr-auto text-left" md="6" style={{ marginTop: "50px"}}>
-                <h5>walkthrough of NUTransit</h5>
-                <p>NUTransit, formerly known as saferide, is an app that allows drivers to drive students around campus after 7 pm. once you open the app, you should see a prompt showing your current location, asking you to put in your desired location. you will see rides that will help you get there, as well as their corresponding arrival times. however, a pain point that i found out from my interviewee is that ridesharing, although more efficient than solo rides, causes delays in pickup. my interviewee wishes that feature could be more reliable in terms of timing and also doesn't like the fact that they can't change the number of passengers. they believe that adding a ~5 min "buffer time" would make the time estimate more realistic and would prefer knowing if their ride was cancelled rather than being "left on limbo".</p>
-              </Col>
-            <Col md="6">
-                <img src={require("assets/img/nutransit.png")} alt="NUTransit" className="project-img" style={{ marginTop: "40px"}}/>
-                  <div
-                    className="image-container"
-                    style={{
-                      backgroundImage:
-                        "url(" + require("assets/img/bg3.jpg") + ")"
-                    }}
-                  ></div>
-                </Col>
-            </Row>
-            <Row>
-            <Col md="6">
-                <img src={require("assets/img/tripshot.png")} alt="Tripshot" className="project-img" style={{ marginTop: "40px"}}/>
-                  <div
-                    className="image-container"
-                    style={{
-                      backgroundImage:
-                        "url(" + require("assets/img/bg3.jpg") + ")"
-                    }}
-                  ></div>
-                </Col>
-                <Col className="ml-auto mr-auto text-left" md="6" style={{ marginTop: "70px"}}>
-                    <h5>walkthrough of tripshot</h5>
-                    <p>tripshot is an app that provides info about upcoming buses or trains, providing possibles ways to get to a certain destination. it also tells about potential lane closures/warnings, which is a feature lacking on most map apps. my interviewee said that they like that tripshot shows options to get to a particular location but doesn't really look at those since they find it hard to memorize the bus stop closest to the location. they also would like closure regarding delayed buses/trains, and thinks that a feature allowing them to edit the number of passengers on a bus/public transport app is a bit redundant. they also feel like the app is almost copying google maps in some respect, such as adding options for driving.</p>
-              </Col>
-            </Row>
+           <h5>research insights</h5>
+           <p>from this interview, i gathered the following insights:</p>
+           <ul>
+            <li>NUTransit is used more often at night due to safety concerns and convenience</li>
+            <li>ridesharing causes delays in pickup</li>
+            <li>users are frustrated by unreliable ETAs as well as being given little notice in case of a cancellation</li>
+            <li>feature overload reduces trust, especially when features feel irrelevant to the context</li>
+           </ul>
             <h5>interviewee needs</h5>
+            <p>i distilled these insights into four core user needs:</p>
             <ul>
-              <li>clarity</li>
-              <li>closure</li>
-              <li>relevant features only</li>
-              <li>to be able to get across campus without walking too much</li>
+              <li>clarity - accurate expectations around timing and ride status</li>
+              <li>closure - being given notice when a ride is canceled or delayed</li>
+              <li>relevance - only including features that directly support student transportation needs</li>
+              <li>convenience - minimize walking across campus late at night</li>
             </ul>
             <h3>ideation</h3>
-            <h5>after the interview, i found the following opportunities for design:</h5>
-            <ul>
-              <li>a feature that allows the user to change the # of passengers</li>
-              <li>a post-cancellation notification or message</li>
-              <li>an algorithm that pairs the user with another upcoming ride</li>
-            </ul>
+            <p>i used affinity mapping to cluster interview observations into themes, which i then synthesized into actionable pain points and design opportunities.</p>
+            <div className="image-wrapper">
+              <img
+                src={AffinityMap}
+                alt="Affinity Map"
+                className="center-image"
+              />
+            </div>
+            <PainToDesign/>
             <h5>feature ideas that i came up with:</h5>
             <TransportCarousel/>
             <h5 style={{ marginTop: "70px"}}>which ideas did i choose to move forward with?</h5>
             <p>i decided to combine multiple ideas into one interface: the +/- buttons, the cancellation message, and the upcoming ride matching algorithm.</p>
             <p>i chose these because it provides my user with a sense of closure if their ride gets cancelled, and the matching algorithm guarantees them another ride so they can get across campus without walking too much. this design allows them to edit the number of passengers, so it addresses most of their needs and pain points.</p>
+            <FeaturesNotUsed/>
             <h5>my first prototype, on paper:</h5>
             <div className="d-flex justify-content-center" style={{ marginTop: "70px"}}>
               <img
@@ -118,10 +94,13 @@ function TransportApp() {
               />
             </div>
             <h3 style={{ marginTop: "70px"}}>user testing</h3>
-            <p>for user testing, i used a thinkaloud, reading out a script like a second-person story, asking the user to imagine themselves getting out of the library at 9 pm after a long study sesh, calling a saferide and adjusting the number of passengers. i then ask them to imagine their ride being canceled and the algorithm matching them up with another ride, displaying info about their new ride. after my thinkaloud, i gather feedback from my user.</p>
-            <h3>feedback</h3>
-            <p>the user really liked it!</p>
-            <p>they think it sufficiently addressed all their needs. however, one thing i could have done better was adding paper flaps to the prototype to imitate buttons, scrolling, and changes of screens, allowing the user to interact with it more realistically.</p>
+            <p>i conducted a thinkaloud usability test using a scenario-based script. the participant verbalized their thoughts while requesting a ride, adjusting passenger count, and experiencing a cancellation.</p>
+            <p>key findings:</p>
+            <ul>
+              <li>the cancellation state provided reassurance and reduced uncertainty</li>
+              <li>the rematching flow made recovery feel “automatic” rather than stressful</li>
+              <li>interaction affordances could be improved in low-fidelity prototypes</li>
+            </ul>
             <h3>final prototype (figma)</h3>
             <p>here is my final prototype, done on figma, to mimic what it would actually look like on a phone screen:</p>
             <div style={{ display: "flex", justifyContent: "center" }}>
@@ -133,6 +112,13 @@ function TransportApp() {
                 allowFullScreen
               ></iframe>
             </div>
+            <h3 style={{ marginTop: "40px"}}>takeaways</h3>
+            <h5>more isn't always better</h5>
+            <p>as a designer from a cs background, i think about ux complexity the same way i think about algorithmic complexity. every additional option increases the cost to the user, whether it be cognitive load or the potential for error.</p>
+            <h5>focus on edge cases & failure states</h5>
+            <p>it's important to look beyond the normal path - what happens if it fails? designing for failure states, such as ride delays, is pivotal to user trust.</p>
+            <h5>strike a balance between aesthetics and implementation constraints</h5>
+            <p>a great design isn't just pretty - it needs to be technically realistic, especially designs with a lot of emphasis on algorithms and system states like this one. if i had more time, i would test with multiple students to validate patterns across different schedules, explore more edge cases such as repeated cancellations, and collaborate with engineers to assess feasibility of real-time matching algorithms.</p>
           </Container>
         </div>
         <TransparentFooter />
