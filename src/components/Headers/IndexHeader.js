@@ -47,7 +47,7 @@ function IndexHeader() {
           <p className="category category-absolute"
               style={{ marginTop: "-300px", fontWeight: 400 }}
           >
-              i’m a junior at northwestern studying computer science, psychology, and design. i'm passionate about bridging the gap between design and implementation, and my current interests lie in ux design, front-end engineering, and web development.
+              i’m a junior at northwestern studying computer science, psychology, and design. i'm passionate about bridging the gap between design and implementation, and my current interests lie in ux design and software engineering (front-end/full-stack).
           </p>
         </Container>
       </div>
