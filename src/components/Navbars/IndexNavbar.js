@@ -5,8 +5,7 @@ import {
   Nav, 
   NavItem, 
   NavLink, 
-  Container,
-  Collapse
+  Container
 } from "reactstrap";
 
 function IndexNavbar() {
@@ -16,7 +15,6 @@ function IndexNavbar() {
 
   const toggle = () => {
     setIsOpen(!isOpen);
-    // Toggle body class to prevent scrolling
     if (!isOpen) {
       document.body.classList.add('nav-open');
     } else {
@@ -46,18 +44,6 @@ function IndexNavbar() {
     }
   };
 
-  // Close menu on escape key
-  useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === 'Escape' && isOpen) {
-        setIsOpen(false);
-        document.body.classList.remove('nav-open');
-      }
-    };
-    window.addEventListener('keydown', handleEscape);
-    return () => window.removeEventListener('keydown', handleEscape);
-  }, [isOpen]);
-
   return (
     <>
       <Navbar
@@ -66,63 +52,83 @@ function IndexNavbar() {
         } ${isOpen ? "nav-open" : ""}`}
         expand="md"
       >
-        <Container className="d-flex justify-content-between align-items-center position-relative">
+        <Container className="d-flex justify-content-between align-items-center">
           <NavbarBrand 
             href="/index" 
             id="navbar-brand" 
-            className={`navbar-text mobile-brand ${isOpen ? 'fade-out' : 'fade-in'}`}
+            className="navbar-text"
           >
             ronghe chen
           </NavbarBrand>
           
           {/* Custom hamburger button */}
           <button 
-            className={`mobile-menu-toggle d-md-none ${isOpen ? 'open' : ''}`}
+            className={`mobile-toggle d-md-none ${isOpen ? 'open' : ''}`}
             onClick={toggle}
             type="button"
             aria-label="Toggle menu"
           >
-            <div className="menu-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+            <span className="toggle-line"></span>
+            <span className="toggle-line"></span>
+            <span className="toggle-line"></span>
           </button>
           
-          <Collapse isOpen={isOpen} navbar className="justify-content-end mobile-menu-collapse">
-            <div className="mobile-menu-content">
-              <Nav className="mobile-nav" navbar>
-                <NavItem>
-                  <NavLink href="/portfolio" onClick={handleNavClick} className="nav-link-hover">
-                    <p className="navbar-text">work</p>
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/projects" onClick={handleNavClick} className="nav-link-hover">
-                    <p className="navbar-text">projects</p>
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    href="/resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={handleNavClick}
-                    className="nav-link-hover"
-                  >
-                    <p className="navbar-text">resume</p>
-                  </NavLink>
-                </NavItem>
-              </Nav>
-            </div>
-          </Collapse>
+          {/* Desktop Navigation */}
+          <div className="d-none d-md-flex">
+            <Nav navbar>
+              <NavItem>
+                <NavLink href="/portfolio" className="nav-link-hover">
+                  <p className="navbar-text">work</p>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/projects" className="nav-link-hover">
+                  <p className="navbar-text">projects</p>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-link-hover"
+                >
+                  <p className="navbar-text">resume</p>
+                </NavLink>
+              </NavItem>
+            </Nav>
+          </div>
         </Container>
       </Navbar>
       
-      {/* Mobile menu overlay */}
-      {isOpen && (
-        <div className="mobile-menu-overlay" onClick={toggle}></div>
-      )}
+      {/* Mobile Menu Overlay */}
+      <div className={`mobile-menu-overlay ${isOpen ? 'active' : ''}`}>
+        <div className="mobile-menu-container">
+          <Nav vertical className="mobile-nav">
+            <NavItem>
+              <NavLink href="/portfolio" onClick={handleNavClick} className="mobile-nav-link">
+                <p className="navbar-text">work</p>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/projects" onClick={handleNavClick} className="mobile-nav-link">
+                <p className="navbar-text">projects</p>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleNavClick}
+                className="mobile-nav-link"
+              >
+                <p className="navbar-text">resume</p>
+              </NavLink>
+            </NavItem>
+          </Nav>
+        </div>
+      </div>
     </>
   );
 }
