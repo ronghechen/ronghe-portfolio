@@ -20,6 +20,7 @@ import Portfolio from "views/Portfolio.js";
 import Projects from "views/Projects.js";
 import Echolab from "views/Echolab.js";
 import Notesync from "views/Notesync.js";
+import Placeholder from "views/Placeholder";
 import TransportApp from "views/TransportApp.js";
 
 const pages = {
@@ -31,6 +32,7 @@ const pages = {
   "/projects": Projects,
   "/echolab": Echolab,
   "/notesync": Notesync,
+  "/placeholder": Placeholder,
   "/nu-transport-app": TransportApp,
 };
 

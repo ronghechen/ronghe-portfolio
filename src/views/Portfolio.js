@@ -119,6 +119,33 @@ function Portfolio() {
                   ></div>
                 </Col>
             </Row>
+            <Row>
+            <Col md="6">
+                <img src={require("assets/img/openqquantify.png")} alt="Notesync" className="project-img"/>
+                  <div
+                    className="image-container"
+                    style={{
+                      backgroundImage:
+                        "url(" + require("assets/img/bg3.jpg") + ")"
+                    }}
+                  ></div>
+                </Col>
+            <Col className="ml-auto mr-auto text-right" md="6" style={{ marginTop: "100px"}}>
+                <h3>openqquantify</h3>
+                <h4>software engineering</h4>
+                <p>
+                designed and built an ai medical regulation assistant web app, where i implemented the frontend in html/css/js and the backend in flask using openai apis and sqlalchemy. focused on clarity, trust, and information presentation in a regulated domain.
+                </p>
+                <Button
+                    outline
+                    color="dark"
+                    className="custom-btn"
+                    href="/placeholder"
+                    >
+                    view project
+                    </Button>
+              </Col>
+            </Row>
           </Container>
         </div>
         <TransparentFooter />
