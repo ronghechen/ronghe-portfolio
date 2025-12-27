@@ -1,26 +1,330 @@
-/* Reset and base styles */
+/* Reset ALL navbar styles first */
 .navbar {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  min-height: 53px;
-  margin-bottom: 20px;
+  all: initial !important;
+  font-family: inherit !important;
 }
 
 .navbar.custom-navbar {
-  background-image: url("/assets/img/header.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  all: unset !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 9999 !important;
+  width: 100% !important;
   transition: opacity 0.5s ease, transform 0.5s ease !important;
-  color: #fff;
-  z-index: 1050;
-}
-
-.navbar.navbar-transparent.custom-navbar {
-  background-color: transparent !important;
   background-image: none !important;
+  background-color: transparent !important;
 }
 
+/* Desktop styles - transparent */
+@media (min-width: 769px) {
+  .navbar.custom-navbar {
+    background: transparent !important;
+  }
+  
+  .navbar.custom-navbar .navbar-brand {
+    color: #fff !important;
+    font-size: 1.2rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    text-decoration: none !important;
+  }
+  
+  .navbar.custom-navbar .nav-link p {
+    color: #fff !important;
+    font-size: 1.1rem !important;
+    margin: 0 1rem !important;
+    text-decoration: none !important;
+    transition: opacity 0.3s ease !important;
+  }
+  
+  .navbar.custom-navbar .nav-link:hover p {
+    opacity: 0.7 !important;
+  }
+  
+  .mobile-menu-toggle,
+  .mobile-menu-overlay {
+    display: none !important;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  /* Base navbar - transparent initially */
+  .navbar.custom-navbar {
+    height: 70px !important;
+    min-height: 70px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  
+  /* When menu is open - show background image */
+  .navbar.custom-navbar.nav-open {
+    background-image: url("/assets/img/header.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    height: 100vh !important;
+    width: 100vw !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 9999 !important;
+  }
+  
+  /* Container */
+  .navbar.custom-navbar .container {
+    padding: 0 20px !important;
+    margin: 0 auto !important;
+    height: 70px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Brand - hide when menu opens */
+  .navbar.custom-navbar .navbar-brand {
+    color: #fff !important;
+    font-size: 1.3rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    text-decoration: none !important;
+    position: absolute !important;
+    left: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10002 !important;
+    transition: opacity 0.3s ease !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .navbar.custom-navbar.nav-open .navbar-brand {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  
+  /* Custom menu toggle button */
+  .mobile-menu-toggle {
+    all: unset !important;
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 40px !important;
+    height: 40px !important;
+    cursor: pointer !important;
+    z-index: 10003 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+  
+  /* Menu icon - hamburger/X */
+  .mobile-menu-toggle .menu-icon {
+    width: 30px !important;
+    height: 20px !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+  
+  .mobile-menu-toggle .menu-icon span {
+    display: block !important;
+    width: 100% !important;
+    height: 2px !important;
+    background-color: #fff !important;
+    border-radius: 0 !important;
+    transition: all 0.3s ease !important;
+    transform-origin: center !important;
+  }
+  
+  /* Transform to X when open */
+  .mobile-menu-toggle.open .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px) !important;
+  }
+  
+  .mobile-menu-toggle.open .menu-icon span:nth-child(2) {
+    opacity: 0 !important;
+    transform: translateX(-10px) !important;
+  }
+  
+  .mobile-menu-toggle.open .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px) !important;
+  }
+  
+  /* Mobile menu overlay */
+  .mobile-menu-overlay {
+    display: none !important;
+  }
+  
+  /* Collapse menu - full screen */
+  .navbar.custom-navbar .navbar-collapse {
+    all: unset !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: transparent !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 10001 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .navbar.custom-navbar .navbar-collapse.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  /* Navigation items */
+  .navbar.custom-navbar .mobile-nav {
+    all: unset !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+  
+  .navbar.custom-navbar .nav-item {
+    all: unset !important;
+    margin: 25px 0 !important;
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+    animation: slideInUp 0.5s ease forwards !important;
+  }
+  
+  .navbar.custom-navbar .nav-item:nth-child(1) {
+    animation-delay: 0.1s !important;
+  }
+  
+  .navbar.custom-navbar .nav-item:nth-child(2) {
+    animation-delay: 0.2s !important;
+  }
+  
+  .navbar.custom-navbar .nav-item:nth-child(3) {
+    animation-delay: 0.3s !important;
+  }
+  
+  @keyframes slideInUp {
+    to {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+  }
+  
+  /* Nav links */
+  .navbar.custom-navbar .nav-link {
+    all: unset !important;
+    cursor: pointer !important;
+    padding: 15px 30px !important;
+    display: block !important;
+  }
+  
+  .navbar.custom-navbar .nav-link p {
+    all: unset !important;
+    color: #fff !important;
+    font-size: 2.2rem !important;
+    font-weight: 300 !important;
+    letter-spacing: 2px !important;
+    text-decoration: none !important;
+    transition: opacity 0.3s ease !important;
+    display: block !important;
+  }
+  
+  .navbar.custom-navbar .nav-link:hover p {
+    opacity: 0.7 !important;
+  }
+  
+  /* Prevent body scroll when menu is open */
+  body.nav-open {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  /* Hide desktop nav on mobile */
+  .navbar.custom-navbar:not(.nav-open) .navbar-collapse {
+    display: none !important;
+  }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+  .navbar.custom-navbar {
+    height: 60px !important;
+    min-height: 60px !important;
+  }
+  
+  .navbar.custom-navbar .navbar-brand {
+    font-size: 1.1rem !important;
+    left: 15px !important;
+  }
+  
+  .mobile-menu-toggle {
+    right: 15px !important;
+    width: 35px !important;
+    height: 35px !important;
+  }
+  
+  .mobile-menu-toggle .menu-icon {
+    width: 25px !important;
+    height: 18px !important;
+  }
+  
+  .navbar.custom-navbar .nav-link p {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Animation classes */
+.fade-out {
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+/* Simple navbar styles for desktop */
+.simple-navbar {
+  padding: 0.75rem 2rem !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.simple-navbar .navbar-brand,
+.simple-navbar .nav-link p {
+  color: white !important;
+}
+
+/* Scroll behavior */
 .navbar.custom-navbar.visible {
   opacity: 1 !important;
   transform: translateY(0) !important;
@@ -28,379 +332,6 @@
 
 .navbar.custom-navbar.hidden {
   opacity: 0 !important;
-  transform: translateY(-50px) !important;
+  transform: translateY(-100%) !important;
   pointer-events: none !important;
-}
-
-/* Brand styling */
-.navbar-brand {
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  color: #fff !important;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-/* Navigation items */
-.navbar-nav .nav-link:not(.btn) {
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  padding: 0.5rem 1rem;
-  color: #fff !important;
-}
-
-.navbar-nav .nav-link p {
-  margin: 0;
-  display: inline-block;
-  line-height: 1.5;
-}
-
-/* Hover effects - text opacity only */
-.nav-link-hover:hover .navbar-text {
-  opacity: 0.7 !important;
-  transition: opacity 0.3s ease !important;
-}
-
-.nav-link-hover:active .navbar-text,
-.nav-link-hover:focus .navbar-text {
-  opacity: 0.5 !important;
-}
-
-/* Remove background hover effects */
-.nav-item.active .nav-link:not(.btn),
-.nav-item .nav-link:not(.btn):focus,
-.nav-item .nav-link:not(.btn):hover,
-.nav-item .nav-link:not(.btn):active {
-  background-color: transparent !important;
-  border-radius: 0 !important;
-}
-
-/* Hamburger button styles - Clean CSS hamburger */
-.hamburger {
-  padding: 0 !important;
-  display: inline-block;
-  cursor: pointer;
-  transition-property: opacity, filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background-color: transparent !important;
-  border: 0 !important;
-  margin: 0;
-  overflow: visible;
-  z-index: 1002;
-  position: relative;
-}
-
-.hamburger:hover {
-  opacity: 0.7;
-}
-
-.hamburger-box {
-  width: 30px;
-  height: 24px;
-  display: inline-block;
-  position: relative;
-}
-
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: -2px;
-}
-
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-  width: 30px;
-  height: 2px;
-  background-color: #fff;
-  border-radius: 0;
-  position: absolute;
-  transition-property: transform;
-  transition-duration: 0.15s;
-  transition-timing-function: ease;
-}
-
-.hamburger-inner::before,
-.hamburger-inner::after {
-  content: "";
-  display: block;
-}
-
-.hamburger-inner::before {
-  top: -8px;
-}
-
-.hamburger-inner::after {
-  bottom: -8px;
-}
-
-/* Hamburger spin animation */
-.hamburger--spin .hamburger-inner {
-  transition-duration: 0.22s;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.hamburger--spin .hamburger-inner::before {
-  transition: top 0.1s 0.25s ease-in,
-              opacity 0.1s ease-in;
-}
-
-.hamburger--spin .hamburger-inner::after {
-  transition: bottom 0.1s 0.25s ease-in,
-              transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.hamburger--spin.is-active .hamburger-inner {
-  transform: rotate(225deg);
-  transition-delay: 0.12s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.hamburger--spin.is-active .hamburger-inner::before {
-  top: 0;
-  opacity: 0;
-  transition: top 0.1s ease-out,
-              opacity 0.1s 0.12s ease-out;
-}
-
-.hamburger--spin.is-active .hamburger-inner::after {
-  bottom: 0;
-  transform: rotate(-90deg);
-  transition: bottom 0.1s ease-out,
-              transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-/* Simple navbar */
-.simple-navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 2rem;
-  background: transparent !important;
-  box-shadow: none;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  z-index: 1050;
-}
-
-.simple-navbar .navbar-brand,
-.simple-navbar .nav-link p {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  color: white !important;
-}
-
-.simple-navbar .navbar-brand {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1;
-}
-
-.simple-navbar .nav-link p {
-  font-size: 1.1rem;
-  text-transform: none;
-  line-height: 1;
-  margin-left: 1rem;
-}
-
-/* Desktop styles */
-@media (min-width: 769px) {
-  .navbar.custom-navbar {
-      background-image: none !important;
-      background-color: transparent !important;
-  }
-  
-  .hamburger {
-      display: none !important;
-  }
-  
-  .simple-navbar .nav {
-      display: flex;
-      align-items: center;
-  }
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-  /* Navbar base */
-  .navbar.custom-navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      min-height: 60px;
-      padding: 0;
-      background-image: none !important;
-      background-color: transparent !important;
-      transition: all 0.3s ease;
-  }
-  
-  /* When menu is open */
-  .navbar.custom-navbar.nav-open {
-      background-image: url("/assets/img/header.jpg") !important;
-      background-size: cover !important;
-      background-position: center !important;
-      height: 100vh;
-      width: 100vw;
-  }
-  
-  /* Container */
-  .navbar.custom-navbar .container {
-      height: 60px;
-      position: relative;
-      padding: 0 1rem;
-  }
-  
-  /* Brand */
-  .navbar.custom-navbar .navbar-brand {
-      position: absolute;
-      left: 1rem;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.2rem;
-      color: white !important;
-      z-index: 1001;
-  }
-  
-  /* Hamburger position */
-  .hamburger {
-      position: absolute;
-      right: 1rem;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 1002;
-  }
-  
-  /* Collapse menu */
-  .navbar.custom-navbar .navbar-collapse {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100vw;
-      height: 100vh;
-      background: transparent !important;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-      margin: 0 !important;
-      padding: 0 !important;
-  }
-  
-  .navbar.custom-navbar .navbar-collapse.show {
-      opacity: 1;
-      visibility: visible;
-  }
-  
-  /* Navigation items */
-  .navbar.custom-navbar .navbar-nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-  }
-  
-  .navbar.custom-navbar .nav-item {
-      margin: 2rem 0;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: slideInUp 0.4s ease forwards;
-  }
-  
-  .navbar.custom-navbar .nav-item:nth-child(1) {
-      animation-delay: 0.1s;
-  }
-  
-  .navbar.custom-navbar .nav-item:nth-child(2) {
-      animation-delay: 0.2s;
-  }
-  
-  @keyframes slideInUp {
-      to {
-          opacity: 1;
-          transform: translateY(0);
-      }
-  }
-  
-  .navbar.custom-navbar .nav-link {
-      padding: 1rem 2rem;
-  }
-  
-  .navbar.custom-navbar .nav-link p {
-      font-size: 2rem !important;
-      color: white !important;
-      margin: 0;
-  }
-  
-  /* Prevent body scroll */
-  body.nav-open {
-      overflow: hidden !important;
-      height: 100vh;
-  }
-  
-  /* Simple navbar adjustments */
-  .simple-navbar {
-      padding: 0.5rem 1rem;
-  }
-  
-  .simple-navbar .navbar-brand {
-      font-size: 1rem;
-  }
-}
-
-/* Small mobile */
-@media (max-width: 480px) {
-  .navbar.custom-navbar {
-      height: 55px;
-  }
-  
-  .navbar.custom-navbar .navbar-brand {
-      font-size: 1.1rem;
-      left: 1rem;
-  }
-  
-  .hamburger {
-      right: 1rem;
-  }
-  
-  .hamburger-box {
-      width: 25px;
-      height: 20px;
-  }
-  
-  .hamburger-inner,
-  .hamburger-inner::before,
-  .hamburger-inner::after {
-      width: 25px;
-  }
-  
-  .hamburger-inner::before {
-      top: -7px;
-  }
-  
-  .hamburger-inner::after {
-      bottom: -7px;
-  }
-  
-  .navbar.custom-navbar .nav-link p {
-      font-size: 1.8rem !important;
-  }
 }

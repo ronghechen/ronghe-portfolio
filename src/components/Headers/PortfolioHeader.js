@@ -34,6 +34,11 @@ function PortfolioHeader() {
         <div className="content-center">
           <Container>
             <h3>:･ﾟ✧ work :･ﾟ✧</h3>
+            <p className="category category-absolute"
+              style={{fontWeight: 400 }}
+          >
+              placeholder
+          </p>
           </Container>
         </div>
       </div>

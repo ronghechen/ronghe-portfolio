@@ -17,6 +17,7 @@ import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import Portfolio from "views/Portfolio.js";
+import Projects from "views/Projects.js";
 import Echolab from "views/Echolab.js";
 import Notesync from "views/Notesync.js";
 import TransportApp from "views/TransportApp.js";
@@ -27,6 +28,7 @@ const pages = {
   "/profile-page": ProfilePage,
   "/login-page": LoginPage,
   "/portfolio": Portfolio,
+  "/projects": Projects,
   "/echolab": Echolab,
   "/notesync": Notesync,
   "/nu-transport-app": TransportApp,
