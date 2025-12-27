@@ -89,30 +89,32 @@ function IndexNavbar() {
             </div>
           </button>
           
-          <Collapse isOpen={isOpen} navbar className="justify-content-end">
-            <Nav className="ml-auto mobile-nav" navbar>
-              <NavItem>
-                <NavLink href="/portfolio" onClick={handleNavClick} className="nav-link-hover">
-                  <p className="navbar-text">work</p>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/projects" onClick={handleNavClick} className="nav-link-hover">
-                  <p className="navbar-text">projects</p>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={handleNavClick}
-                  className="nav-link-hover"
-                >
-                  <p className="navbar-text">resume</p>
-                </NavLink>
-              </NavItem>
-            </Nav>
+          <Collapse isOpen={isOpen} navbar className="justify-content-end mobile-menu-collapse">
+            <div className="mobile-menu-content">
+              <Nav className="mobile-nav" navbar>
+                <NavItem>
+                  <NavLink href="/portfolio" onClick={handleNavClick} className="nav-link-hover">
+                    <p className="navbar-text">work</p>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/projects" onClick={handleNavClick} className="nav-link-hover">
+                    <p className="navbar-text">projects</p>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={handleNavClick}
+                    className="nav-link-hover"
+                  >
+                    <p className="navbar-text">resume</p>
+                  </NavLink>
+                </NavItem>
+              </Nav>
+            </div>
           </Collapse>
         </Container>
       </Navbar>

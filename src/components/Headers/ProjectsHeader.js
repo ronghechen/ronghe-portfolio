@@ -34,6 +34,11 @@ function PortfolioHeader() {
         <div className="content-center">
           <Container>
             <h3>:･ﾟ✧ projects :･ﾟ✧</h3>
+            <p className="category category-absolute"
+              style={{marginTop: "100px", fontWeight: 400 }}
+          >
+              self-directed explorations in engineering, visuals, and interaction.
+          </p>
           </Container>
         </div>
       </div>

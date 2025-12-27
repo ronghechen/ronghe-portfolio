@@ -35,9 +35,9 @@ function PortfolioHeader() {
           <Container>
             <h3>:･ﾟ✧ work :･ﾟ✧</h3>
             <p className="category category-absolute"
-              style={{fontWeight: 400 }}
+              style={{marginTop: "100px", fontWeight: 400 }}
           >
-              placeholder
+              projects completed in academic, internship, and team-based environments focused on real users, constraints, and production considerations.
           </p>
           </Container>
         </div>
