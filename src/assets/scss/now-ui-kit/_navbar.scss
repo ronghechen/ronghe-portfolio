@@ -298,144 +298,249 @@
     }
   }*/
 
-  @media (max-width: 768px) {
-    /* Navbar background + layout */
-    .navbar.custom-navbar {
-      background-image: url("/assets/img/header.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      position: fixed;
-      top: 0 !important;
-      left: 0;
-      width: 100%;
-      height: auto;
-      padding: 0.75rem 1rem;
-      z-index: 1050;
-      box-shadow: none;
-    }
-  
-    /* Remove Reactstrap default blue collapse background */
-    .navbar-collapse {
-      background: transparent !important;
-      box-shadow: none !important;
-      border: none !important;
-      position: absolute;
-      top: 100%; /* right below navbar */
-      left: 0;
-      width: 100%;
-      display: flex !important;
-      justify-content: center;
-      align-items: center;
-      padding: 0.5rem 0;
-    }
-  
-    /* Make nav items horizontal */
-    .navbar-nav {
-      display: flex !important;
-      flex-direction: row !important;
-      justify-content: center;
-      width: 100%;
-    }
-  
-    /* Style nav links */
-    .navbar-nav .nav-link p {
-      font-size: 1.1rem;
-      color: white !important;
-      margin: 0 1rem;
-      text-transform: none;
-    }
-  
-    .navbar-brand {
-      color: white !important;
-      font-size: 1.3rem;
-      text-transform: lowercase;
-    }
-  
-    .navbar-toggler {
-      position: absolute;
-      top: 1rem;
-      right: 1.25rem;
-    }
-  
-    /* Make sure the dropdown doesn't mess with layout */
-    .navbar-collapse[style] {
-      background: transparent !important;
-    }
-  
-    body.nav-open {
-      overflow: auto !important;
-    }
-  }
-//simple navbar
+/* Mobile hamburger menu styles */
+/* KEEP ALL YOUR ORIGINAL DESKTOP STYLES HERE - don't remove them */
 
-.simple-navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.75rem 2rem;
-    background: transparent !important;
-    box-shadow: none;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+/* Add this new CSS for mobile hamburger menu */
+@media (max-width: 768px) {
+  /* Navbar base for mobile */
+  .navbar.custom-navbar {
+    background-image: none !important; /* Remove background image on mobile */
+    background-color: transparent !important;
+    position: fixed;
+    top: 0 !important;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 53px;
+    padding: 0.75rem 1rem;
     z-index: 1050;
   }
-  
-  .simple-navbar .navbar-brand,
-  .simple-navbar .nav-link p {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin: 0;
+
+  /* Add background when scrolled on mobile */
+  .navbar.custom-navbar:not(.navbar-transparent) {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    background-image: url("/assets/img/header.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  /* Full-screen overlay when menu is open */
+  .navbar.custom-navbar.nav-open {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95) !important;
+    background-image: url("/assets/img/header.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-blend-mode: overlay;
+  }
+
+  /* Hamburger toggler styles */
+  .navbar-toggler {
+    display: block !important;
+    position: relative;
+    width: 37px;
+    height: 27px;
     padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1060;
+  }
+
+  .navbar-toggler-bar {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+    border-radius: 1px;
+  }
+
+  /* Hamburger animation when open */
+  .navbar.custom-navbar.nav-open .navbar-toggler-bar-top {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+    margin-top: 12px;
+  }
+
+  .navbar.custom-navbar.nav-open .navbar-toggler-bar-middle {
+    opacity: 0;
+  }
+
+  .navbar.custom-navbar.nav-open .navbar-toggler-bar-bottom {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+    margin-top: -12px;
+  }
+
+  /* Collapse menu styling */
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1050;
+  }
+
+  .navbar-collapse.collapse.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Navigation items styling */
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 1.5rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .navbar.custom-navbar.nav-open .navbar-nav .nav-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger the animation for each item */
+  .navbar.custom-navbar.nav-open .navbar-nav .nav-item:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  
+  .navbar.custom-navbar.nav-open .navbar-nav .nav-item:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    background-color: transparent !important; /* Remove background on mobile */
+    border-radius: 0 !important; /* Remove border radius */
+  }
+
+  .navbar-nav .nav-link p {
+    font-size: 1.8rem !important;
+    color: white !important;
+    text-transform: none;
+    letter-spacing: 1px;
+    font-weight: 300;
+    transition: opacity 0.3s ease !important; /* Text opacity transition */
+  }
+
+  /* Hover effect - text opacity only (not background box) */
+  .navbar-nav .nav-link:hover p {
+    opacity: 0.7 !important; /* Text opacity on hover */
+  }
+
+  .navbar-nav .nav-link:active p,
+  .navbar-nav .nav-link:focus p {
+    background-color: transparent !important; /* No background change */
+    opacity: 0.5 !important; /* Text opacity only */
+  }
+
+  /* Remove desktop hover effects on mobile */
+  .navbar-nav .nav-item.active .nav-link:not(.btn),
+  .navbar-nav .nav-item .nav-link:not(.btn):focus,
+  .navbar-nav .nav-item .nav-link:not(.btn):hover,
+  .navbar-nav .nav-item .nav-link:not(.btn):active {
+    background-color: transparent !important; /* No background on mobile */
+    border-radius: 0 !important; /* No border radius */
+  }
+
+  /* Hide scroll when menu is open */
+  body.nav-open {
+    overflow: hidden !important;
+  }
+
+  /* Simple navbar adjustments for mobile */
+  .simple-navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .simple-navbar .navbar-brand {
+    font-size: 1.1rem;
     color: white !important;
   }
-  
-  /* Fix uneven height between brand and links */
-  .simple-navbar .navbar-brand {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 1;
+
+  /* Brand visibility */
+  .navbar.custom-navbar .navbar-brand {
+    transition: opacity 0.3s ease;
+    z-index: 1060;
   }
   
-  .simple-navbar .nav-link p {
-    font-size: 1.1rem;
-    text-transform: none;
-    line-height: 1;
-    margin-left: 1rem;
+  .navbar.custom-navbar.nav-open .navbar-brand {
+    opacity: 0.5;
   }
-  
-  .simple-navbar .nav {
-    display: flex;
-    align-items: center;
+}
+
+/* Desktop styles - IMPORTANT: Keep transparent background */
+@media (min-width: 769px) {
+  .navbar.custom-navbar {
+    background-image: none !important;
+    background-color: transparent !important;
   }
-  
-  /* Mobile adjustments */
-  @media (max-width: 768px) {
-    .simple-navbar {
-      padding: 0.5rem 1rem;
-    }
-  
-    .simple-navbar .navbar-brand {
-      font-size: 1rem;
-    }
-  
-    .simple-navbar .nav-link p {
-      font-size: 1rem;
-      margin-left: 0.75rem;
-    }
-  }  
-  
-  @media (max-width: 480px) {
-    .navbar.custom-navbar {
-      background-position: top center;
-    }
-  
-    .navbar-nav .nav-link p {
-      font-size: 1.1rem;
-    }
-  
-    .navbar-brand {
-      font-size: 1.3rem;
-    }
+
+  .navbar-toggler {
+    display: none !important;
   }
+
+  /* Desktop hover effect - text opacity only */
+  .nav-link-hover:hover .navbar-text {
+    opacity: 0.7 !important;
+    transition: opacity 0.3s ease !important;
+  }
+
+  .nav-link-hover:active .navbar-text,
+  .nav-link-hover:focus .navbar-text {
+    opacity: 0.5 !important;
+  }
+
+  /* Ensure no background change on desktop */
+  .navbar-nav .nav-item.active .nav-link:not(.btn),
+  .navbar-nav .nav-item .nav-link:not(.btn):focus,
+  .navbar-nav .nav-item .nav-link:not(.btn):hover,
+  .navbar-nav .nav-item .nav-link:not(.btn):active {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+  .navbar.custom-navbar {
+    background-position: top center;
+  }
+
+  .navbar-nav .nav-link p {
+    font-size: 1.5rem !important;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .navbar-toggler {
+    width: 30px;
+    height: 24px;
+  }
+
+  .navbar-toggler-bar {
+    margin: 4px 0;
+  }
+}
