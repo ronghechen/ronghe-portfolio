@@ -5,7 +5,7 @@ import { Button, Container } from "reactstrap";
 
 // core components
 
-function RaisoHeader() {
+function PortfolioHeader() {
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
@@ -33,7 +33,7 @@ function RaisoHeader() {
         ></div>
         <div className="content-center">
           <Container>
-            <h3>:･ﾟ✧ misc design work :･ﾟ✧</h3>
+            <h3>:･ﾟ✧ projects :･ﾟ✧</h3>
           </Container>
         </div>
       </div>
@@ -41,4 +41,4 @@ function RaisoHeader() {
   );
 }
 
-export default RaisoHeader;
+export default PortfolioHeader;
