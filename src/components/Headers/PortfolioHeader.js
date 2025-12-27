@@ -33,7 +33,7 @@ function PortfolioHeader() {
         ></div>
         <div className="content-center">
           <Container>
-            <h3>:･ﾟ✧ portfolio :･ﾟ✧</h3>
+            <h3>:･ﾟ✧ work :･ﾟ✧</h3>
           </Container>
         </div>
       </div>
