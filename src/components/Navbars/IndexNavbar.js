@@ -6,7 +6,6 @@ import {
   NavItem, 
   NavLink, 
   Container,
-  NavbarToggler,
   Collapse
 } from "reactstrap";
 
@@ -62,13 +61,14 @@ function IndexNavbar() {
           ronghe chen
         </NavbarBrand>
         
-        <NavbarToggler onClick={toggle} className="d-md-none custom-toggler">
-          <div className={`navbar-toggler-icon ${isOpen ? 'open' : ''}`}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </NavbarToggler>
+        {/* Custom hamburger button - NOT using NavbarToggler */}
+        <button 
+          className={`navbar-toggler-custom d-md-none ${isOpen ? 'open' : ''}`}
+          onClick={toggle}
+          aria-label="Toggle navigation"
+        >
+          <span className="toggler-icon"></span>
+        </button>
         
         <Collapse isOpen={isOpen} navbar className="justify-content-end">
           <Nav className="ml-auto" navbar>
