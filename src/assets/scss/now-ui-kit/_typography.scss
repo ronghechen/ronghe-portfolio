@@ -60,7 +60,9 @@ h5, .h5 {
     }
 }
 h6, .h6{
-    font-size: $font-size-h6;
+    font-size: 0.8rem;
+    //font-style: italic;
+    text-transform: uppercase;
 }
 p{
     line-height: 1.61em;
