@@ -41,7 +41,7 @@ function Projects() {
             <Row>
             <Col className="ml-auto mr-auto text-right" md="6" style={{ marginTop: "100px"}}>
                 <h3>wandering skies</h3>
-                <h4>software engineering</h4>
+                <h4>creative coding</h4>
                 <p>
                 wandering skies is an interactive sky scene built using javascript and webgl, deployed on vercel, customizing the ui with html/css. users can toggle between 3 times of day (day, sunset, night) and 2 different shading modes (phong, toon w/ purple tint).
                 </p>
@@ -78,7 +78,7 @@ function Projects() {
                 </Col>
             <Col className="ml-auto mr-auto text-right" md="6" style={{ marginTop: "100px"}}>
                 <h3>travel with ronghe</h3>
-                <h4>software engineering</h4>
+                <h4>front-end dev + content creation</h4>
                 <p>
                 because i am passionate about food, photography, and travel, i built my own travel blog with hugo, customizing inputs with bootstrap css and sorting my experiences by continent using taxonomies.
                 </p>
