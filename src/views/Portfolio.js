@@ -195,11 +195,11 @@ function Portfolio() {
                     className="clear-all-btn"
                     onClick={clearAllFilters}
                   >
-                    Clear all
+                    clear all
                   </button>
                 </div>
                 <div className="filter-count">
-                  Showing {filteredProjects.length} of {allProjects.length} projects matching your filters
+                  showing {filteredProjects.length} of {allProjects.length} projects matching your filters
                 </div>
               </div>
             )}
@@ -208,8 +208,8 @@ function Portfolio() {
               filteredProjects.map((project, index) => renderProject(project, index))
             ) : (
               <div className="text-center py-5">
-                <h4>No projects match your selected filters</h4>
-                <p className="text-muted">Try clicking different keywords or <button className="text-link" onClick={clearAllFilters}>clear all filters</button></p>
+                <h4>no projects match your selected filters</h4>
+                <p className="text-muted">try clicking different keywords or <button className="text-link" onClick={clearAllFilters}>clear all filters</button></p>
               </div>
             )}
             

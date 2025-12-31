@@ -37,7 +37,7 @@ function PortfolioHeader() {
             <p className="category category-absolute"
               style={{marginTop: "100px", fontWeight: 400 }}
           >
-              projects completed in academic, internship, and team-based environments focused on real users, constraints, and production considerations.
+              projects completed in academic, internship, and team-based environments focused on real users, constraints, and production considerations. click tags to filter by theme.
           </p>
           </Container>
         </div>
