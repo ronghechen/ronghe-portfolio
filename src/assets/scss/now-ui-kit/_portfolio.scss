@@ -119,6 +119,199 @@
     line-height: 1.6;
   }
 
+  .keyword-badge {
+    transition: all 0.2s ease;
+    font-weight: 400;
+    padding: 0.5rem 1rem !important;
+    border: 1px solid #666 !important;
+    color: #333 !important;
+    background-color: transparent !important;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      border-color: #333 !important;
+      color: #000 !important;
+    }
+    
+    // When keyword is active 
+    &.bg-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+      border: none !important;
+      color: white !important;
+      
+      &:hover {
+        background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%) !important;
+      }
+    }
+  }
+  
+
+  .active-filters-card {
+    border-radius: 16px;
+    background-color: #ffffff;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+    padding: 1.5rem 2rem;
+    margin: 2rem auto;
+    margin-top: -60px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 10;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+    }
+    
+    @media (min-width: 768px) {
+      margin-top: -40px;
+    }
+    
+    @media (min-width: 992px) {
+      margin-top: -30px;
+    }
+  }
+
+  .active-filters-card .d-flex.flex-wrap {
+    gap: 0.75rem !important; 
+    margin-right: -0.25rem; 
+  }
+  
+  .tag-btn {
+    border-radius: 25px;
+    padding: 0.4rem 1.2rem !important; // Smaller padding
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #666;
+    color: #333;
+    background-color: transparent;
+    font-size: 0.85rem; 
+    cursor: pointer;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    white-space: nowrap;
+    text-transform: lowercase; 
+    font-variant: small-caps;
+    letter-spacing: 0.5px;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-color: #333;
+      color: #000;
+    }
+    
+    &.tag-btn-active {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+      color: white;
+      
+      &:hover {
+        background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+        color: white;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+      }
+    }
+  }
+  
+  .active-filter-btn {
+    border-radius: 25px;
+    padding: 0.4rem 1rem 0.4rem 1.3rem; 
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    color: white;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem; 
+    text-transform: lowercase;
+    font-variant: small-caps;
+    letter-spacing: 0.5px;
+    margin: 0.25rem 0.5rem 0.25rem 0; 
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+      opacity: 0.9;
+    }
+    
+    .close-icon {
+      font-size: 1.1rem;
+      line-height: 1;
+      margin-left: 0.1rem; /* Small extra spacing */
+    }
+  }
+  
+  .clear-all-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+    
+    &:hover {
+      color: #333;
+      text-decoration: underline;
+    }
+  }
+  
+  // Keywords container
+  .keywords-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.5rem 0 0;
+  }
+  
+  // Filter count text
+  .filter-count {
+    font-size: 0.875rem;
+    color: #666;
+    font-weight: 400;
+    margin-top: 0.5rem;
+  }
+  
+  // Text link for clear filters in empty state
+  .text-link {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    padding: 0;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .custom-btn {
+    border-radius: 25px !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid #666 !important;
+    color: #333 !important;
+    background-color: transparent !important;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-color: #333 !important;
+      color: #000 !important;
+      background-color: transparent !important;
+    }
+  }
+  
+  .badge {
+    &.keyword-badge {
+      display: none; 
+    }
+  }
+
   @media (max-width: 768px) {
     .experience-card {
       padding: 1.25rem 1.5rem;
