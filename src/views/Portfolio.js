@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from "react";
 
-// reactstrap components
 import {
   Button,
   Container,
@@ -8,7 +7,6 @@ import {
   Col
 } from "reactstrap";
 
-// core components
 import IndexNavbar from "components/Navbars/IndexNavbar";
 import PortfolioHeader from "components/Headers/PortfolioHeader.js";
 import TransparentFooter from "components/Footers/TransparentFooter";
@@ -28,7 +26,6 @@ function Portfolio() {
     };
   }, []);
 
-  // Project data with keywords
   const allProjects = [
     {
       id: 1,
@@ -72,11 +69,9 @@ function Portfolio() {
     }
   ];
 
-  // Filter projects based on selected keywords - FIXED: Changed to AND logic
   const filteredProjects = useMemo(() => {
     if (selectedKeywords.length === 0) return allProjects;
     
-    // Using AND logic: project must include ALL selected keywords
     return allProjects.filter(project =>
       selectedKeywords.every(keyword => project.keywords.includes(keyword))
     );
@@ -94,7 +89,6 @@ function Portfolio() {
     setSelectedKeywords([]);
   };
 
-  // New tag button component
   const TagButton = ({ keyword, isActive, onClick }) => (
     <button
       className={`tag-btn ${isActive ? 'tag-btn-active' : ''}`}
@@ -107,7 +101,6 @@ function Portfolio() {
     </button>
   );
 
-  // Render keywords using new TagButton component
   const renderKeywords = (keywords) => (
     <div className="keywords-container mb-3">
       {keywords.map(keyword => (
@@ -180,7 +173,6 @@ function Portfolio() {
         <PortfolioHeader />
         <div className="section section-about-us">
           <Container>
-            {/* Active Filters Card */}
             {selectedKeywords.length > 0 && (
               <div className="active-filters-card">
                 <div className="d-flex justify-content-between align-items-start mb-3">
@@ -212,7 +204,6 @@ function Portfolio() {
               </div>
             )}
             
-            {/* Projects List */}
             {filteredProjects.length > 0 ? (
               filteredProjects.map((project, index) => renderProject(project, index))
             ) : (

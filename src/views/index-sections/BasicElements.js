@@ -18,7 +18,7 @@ function BasicElements() {
             with a tech background and strong interest in design, i thrive at the intersection of systems meets experience. as a designer, i'm drawn to complex products where clarity, trust, and thoughtful system feedback matter. as an engineer, i love building user-facing products where design quality and usability are central to the product.
           </p>
           <p style={{ maxWidth: "1500px", marginTop: "30px" }}>
-            whether i'm sketching flows or writing code, i focus on making complex systems feel simple and turning great design into something real and usable.
+            i am a problem solver at heart. even in everyday situations, i enjoy analyzing how things work and how to improve the efficiency and experience of both physical and digital products. 
           </p>
           <p style = {{ maxWidth: "1500px", marginTop: "30px" }}>things i love:</p>
           <ul style = {{ maxWidth: "1500px", marginTop: "30px" }}>
