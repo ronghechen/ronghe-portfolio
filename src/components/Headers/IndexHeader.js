@@ -33,92 +33,140 @@ function IndexHeader() {
           ref={pageHeader}
         ></div>
         <Container>
-          <div className="content-center brand">
+          <div 
+            className="content-center brand"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              minHeight: "60vh",
+              paddingBottom: "4rem"
+            }}
+          >
             <img
               alt="..."
               className="n-logo"
               src={require("assets/img/rc-logo.png")}
+              style={{ marginBottom: "1rem" }}
             ></img>
             <h1 className="h1-seo"
               style={{ 
-                textTransform: "none"
+                textTransform: "none",
+                marginBottom: "0.5rem"
               }}
             >ronghe chen.</h1>
-            <h3 style={{ marginBottom: "3rem" }}>
+            <h3 style={{ marginBottom: "4rem" }}>
               developer & designer.
             </h3>
+            
+            <p 
+              style={{ 
+                fontWeight: 350,
+                opacity: 0.7,
+                maxWidth: "1000px", 
+                margin: "0 auto",
+                width: "100%",
+                textAlign: "center",
+                padding: "0 2rem", 
+                lineHeight: "1.6",
+                fontSize: "1.1rem" 
+              }}
+            >
+              i'm a junior at northwestern studying computer science, psychology, and design. i'm passionate about bridging the gap between design and implementation, and my current interests lie in ux design and software engineering (front-end/full-stack).
+            </p>
           </div>
-          <p 
-            className="category category-absolute"
-            style={{ 
-              top: "calc(50% + 100px)", /* Positions it well below the heading */
-              transform: "translateY(-50%)",
-              fontWeight: 400,
-              padding: "0 1rem",
-              maxWidth: "800px",
-              margin: "0 auto",
-              width: "100%",
-              left: "0",
-              right: "0"
-            }}
-          >
-            i'm a junior at northwestern studying computer science, psychology, and design. i'm passionate about bridging the gap between design and implementation, and my current interests lie in ux design and software engineering (front-end/full-stack).
-          </p>
         </Container>
       </div>
       
-      {/* Responsive adjustments to maintain spacing */}
       <style jsx>{`
-        /* Base styles - consistent spacing on all screens */
-        .content-center.brand h3 {
-          margin-bottom: 3rem !important;
+        /* Large desktop screens */
+        @media (min-width: 1200px) {
+          .content-center.brand p {
+            max-width: 1100px !important;
+            padding: 0 3rem !important;
+            font-size: 1.15rem !important;
+            line-height: 1.7 !important;
+          }
         }
         
-        .category.category-absolute {
-          top: calc(50% + 100px) !important;
+        /* Standard desktop */
+        @media (min-width: 992px) and (max-width: 1199px) {
+          .content-center.brand p {
+            max-width: 950px !important;
+            padding: 0 2.5rem !important;
+          }
         }
         
-        /* Tablet adjustments */
-        @media (max-width: 1024px) {
+        /* Tablet */
+        @media (min-width: 768px) and (max-width: 991px) {
+          .content-center.brand {
+            padding-bottom: 3rem !important;
+          }
+          
+          .content-center.brand h3 {
+            margin-bottom: 3rem !important;
+          }
+          
+          .content-center.brand p {
+            max-width: 800px !important;
+            padding: 0 2rem !important;
+            font-size: 1.05rem !important;
+          }
+        }
+        
+        /* Tablet portrait */
+        @media (max-width: 767px) {
+          .content-center.brand {
+            padding-bottom: 2rem !important;
+          }
+          
           .content-center.brand h3 {
             margin-bottom: 2.5rem !important;
           }
           
-          .category.category-absolute {
-            top: calc(50% + 80px) !important;
-            max-width: 700px !important;
-          }
-        }
-        
-        /* Mobile adjustments */
-        @media (max-width: 768px) {
-          .content-center.brand h3 {
-            margin-bottom: 2rem !important;
-          }
-          
-          .category.category-absolute {
-            top: calc(50% + 60px) !important;
+          .content-center.brand p {
             max-width: 90% !important;
             padding: 0 1.5rem !important;
-            position: relative !important;
-            top: auto !important;
-            transform: none !important;
-            margin-top: 2rem !important;
+            font-size: 1rem !important;
           }
         }
         
-        /* Small mobile adjustments */
+        /* Mobile */
         @media (max-width: 480px) {
-          .content-center.brand h3 {
-            margin-bottom: 1.5rem !important;
+          .content-center.brand {
+            padding-bottom: 1.5rem !important;
           }
           
-          .category.category-absolute {
+          .content-center.brand h3 {
+            margin-bottom: 2rem !important;
+            font-size: 1.25rem !important;
+          }
+          
+          .content-center.brand p {
             max-width: 95% !important;
             padding: 0 1rem !important;
-            margin-top: 1.5rem !important;
             font-size: 0.95rem !important;
             line-height: 1.5 !important;
+          }
+        }
+        
+        /* Extra large screens]*/
+        @media (min-width: 1920px) {
+          .content-center.brand p {
+            max-width: 1300px !important;
+            padding: 0 4rem !important;
+            font-size: 1.2rem !important;
+          }
+        }
+        
+        /* Ultra-wide screens */
+        @media (min-width: 2560px) {
+          .content-center.brand p {
+            max-width: 1400px !important;
+            padding: 0 5rem !important;
+            font-size: 1.25rem !important;
+            line-height: 1.8 !important;
           }
         }
       `}</style>
