@@ -63,8 +63,8 @@ function Portfolio() {
       keywords: ["full-stack dev", "web", "ai integration", "information design"],
       description: "designed and built an ai medical regulation assistant web app, where i implemented the frontend in html/css/js and the backend in flask using openai apis and sqlalchemy. focused on clarity, trust, and information presentation in a regulated domain.",
       image: require("assets/img/openqquantify.png"),
-      link: "/placeholder",
-      alt: "OpenQuantify",
+      link: "/openqquantify",
+      alt: "OpenQQuantify",
       colOrder: "text-left"
     }
   ];

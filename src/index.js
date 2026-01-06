@@ -22,6 +22,7 @@ import Echolab from "views/Echolab.js";
 import Notesync from "views/Notesync.js";
 import Placeholder from "views/Placeholder";
 import TransportApp from "views/TransportApp.js";
+import OpenQQuantify from "views/OpenQQuantify.js";
 
 const pages = {
   "/index": Index,
@@ -34,6 +35,7 @@ const pages = {
   "/notesync": Notesync,
   "/placeholder": Placeholder,
   "/nu-transport-app": TransportApp,
+  "/openqquantify": OpenQQuantify,
 };
 
 ReactDOM.render(
