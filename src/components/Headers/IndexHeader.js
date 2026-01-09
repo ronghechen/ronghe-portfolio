@@ -57,7 +57,7 @@ function IndexHeader() {
               }}
             >ronghe chen.</h1>
             <h3 style={{ marginBottom: "4rem" }}>
-              developer & designer.
+              software engineer, designer, and product enthusiast.
             </h3>
             
             <p 
