@@ -15,7 +15,7 @@ function ExperienceSection() {
           <Col md="6" className="mb-3">
             <Card className="experience-card h-100">
               <CardBody>
-                <h4 className="title">･ﾟ✧ currently</h4>
+                <h4 className="title">₊˚ෆ currently</h4>
                 <p>
                   building a full-stack ai-powered web app that supports
                   medical compliance and regulation workflows at{" "}
@@ -28,7 +28,7 @@ function ExperienceSection() {
           <Col md="6" className="mb-3">
             <Card className="experience-card h-100">
               <CardBody>
-                <h4 className="title">:･ﾟ☆ previously</h4>
+                <h4 className="title">⋆°🎧ྀི previously</h4>
                 <p>
                   designed dashboards and ai workflows for{" "}
                   <strong>echolab</strong> via {" "}

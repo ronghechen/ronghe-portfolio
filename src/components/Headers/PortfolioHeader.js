@@ -33,7 +33,7 @@ function PortfolioHeader() {
         ></div>
         <div className="content-center">
           <Container>
-            <h3>:･ﾟ✧ work :･ﾟ✧</h3>
+            <h3>⋆˚࿔ work 𝜗𝜚˚⋆</h3>
             <p className="category category-absolute"
               style={{marginTop: "100px", fontWeight: 400 }}
           >

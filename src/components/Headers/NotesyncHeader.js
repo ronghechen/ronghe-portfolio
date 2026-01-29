@@ -33,7 +33,7 @@ function NotesyncHeader() {
         ></div>
         <div className="content-center">
           <Container>
-            <h3>:･ﾟ✧ notesync :･ﾟ✧</h3>
+            <h3>⋆˚࿔ notesync 𝜗𝜚˚⋆</h3>
           </Container>
         </div>
       </div>

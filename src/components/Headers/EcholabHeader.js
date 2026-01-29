@@ -33,7 +33,7 @@ function EcholabHeader() {
         ></div>
         <div className="content-center">
           <Container>
-            <h3>:･ﾟ✧ echolab :･ﾟ✧</h3>
+            <h3>⋆˚࿔ echolab 𝜗𝜚˚⋆</h3>
           </Container>
         </div>
       </div>

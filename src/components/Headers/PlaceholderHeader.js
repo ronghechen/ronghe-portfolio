@@ -33,7 +33,7 @@ function PlaceholderHeader() {
         ></div>
         <div className="content-center">
           <Container>
-            <h3>:･ﾟ✧ wip :･ﾟ✧</h3>
+            <h3>⋆˚࿔ wip 𝜗𝜚˚⋆</h3>
           </Container>
         </div>
       </div>

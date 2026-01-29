@@ -33,7 +33,7 @@ function OpenQHeader() {
         ></div>
         <div className="content-center">
           <Container>
-            <h3>:･ﾟ✧ openqquantify :･ﾟ✧</h3>
+            <h3>⋆˚࿔ openqquantify 𝜗𝜚˚⋆</h3>
           </Container>
         </div>
       </div>
