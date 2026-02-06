@@ -37,7 +37,7 @@ function TransparentFooter() {
           </ul>
         </nav>
         <div className="copyright" id="copyright">
-          © 2025 ronghe chen ⋆୨୧˚⋆ ˚ ♥ made with love and react components
+          © 2025 ronghe chen ⋆୨୧˚⋆ ˚ ♥ made with love and iced coffee
         </div>
       </Container>
     </footer>

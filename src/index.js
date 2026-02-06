@@ -14,7 +14,6 @@ import withPageLoader from "components/withPageLoader";
 
 import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
-import LoginPage from "views/examples/LoginPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import Portfolio from "views/Portfolio.js";
 import Projects from "views/Projects.js";
@@ -28,7 +27,6 @@ const pages = {
   "/index": Index,
   "/nucleo-icons": NucleoIcons,
   "/profile-page": ProfilePage,
-  "/login-page": LoginPage,
   "/portfolio": Portfolio,
   "/projects": Projects,
   "/echolab": Echolab,

@@ -17,10 +17,9 @@ import IndexNavbar from "components/Navbars/IndexNavbar";
 import OpenQHeader from "components/Headers/OpenQHeader.js";
 import TransparentFooter from "components/Footers/TransparentFooter";
 import InfoCardOpenQ from "./index-sections/InfoCardOpenQ.js";
-import NotesyncImage from "assets/img/notesync_img.png";
-import Geocoding from "./index-sections/Geocoding.js";
-import DevJourney from "./index-sections/DevJourney.js";
-import Crud from "./index-sections/Crud.js";
+import Architecture from "assets/img/architecture.png";
+import Tradeoffs from "./index-sections/BackendTradeoffs.js";
+import ApiTradeoffs from "./index-sections/ApiTradeoffs.js";
 
 function OpenQQuantify() {
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -44,71 +43,72 @@ function OpenQQuantify() {
         <div className="section section-about-us">
           <Container>
             <InfoCardOpenQ/>
-            <h3>overview</h3>
+            <h3>problem statement</h3>
             <Row style={{ marginTop: "-40px"}}>
               <Col className="ml-auto mr-auto text-left" md="6" style={{ marginTop: "40px"}}>
-                <p>at my internship at openqquantify, i built an ai-powered web app to help professionals navigate complex medical and data compliance regulations across the us, eu, uk, and canada.</p>
-                <p>regulatory documentation is dense, fragmented across jurisdictions, and difficult to interpret without without legal expertise. this project aims to translate these regulations into clear, plain-English answers, while preserving trust, transparency, and user confidence in a highly regulated domain.</p>
-                <p>although this project was completed as a part of a software engineering internship, it was guided by ux principles around clarity, cognitive load, and trust, making it the perfect opportunity to showcase my hybrid skillset.</p>
+               <p><strong>goal: </strong> build a lightweight ai-powered web app that answers international medical compliance questions, with optional persistence of user queries.</p>
+                <p><strong>constraints:</strong></p>
+                <ul>
+                  <li>small scope/demo-level infra</li>
+                  <li>need for rapid iteration</li>
+                  <li>privacy-sensitive domain (medical compliance)</li>
+                  <li>low operational overhead</li>
+                </ul>
               </Col>
-              <Col className="ml-auto mr-auto text-center" md="6" style={{ marginTop: "-40px"}}>
-              <img src={require("assets/img/techstack.png")} alt="Tech Stack" className="project-img"/>
-              </Col>
-            </Row>
-            <h3 style={{ marginTop: "-40px"}}>problem</h3>
-            <Row>
-              <Col className="ml-auto mr-auto text-left" md="6" style={{ marginTop: "-40px"}}>
-                <img src={require("assets/img/wcag.png")} alt="WCAG" width="400"/>
-                </Col>
-              <Col className="ml-auto mr-auto text-left" md="6" style={{ marginTop: "40px"}}>
-                <p>medical and health-tech teams </p>
-                
+              <Col className="ml-auto mr-auto text-center" md="6" style={{ marginTop: "-100px"}}>
+              <img src={require("assets/img/globe.png")} alt="Globe" className="project-img"/>
               </Col>
             </Row>
-            <p>another challenge we faced was "show events near me", which i worked on. during development, i realized that location geocoding was taking too long and that the system was returning every event, not just those close to the user. i fixed this problem by extending the timeout to allow more complete data retrieval, debugging inefficient code, and implementing a radius-based filter so users now see only relevant nearby events.</p>
-            <Geocoding/>
-            <h3>takeaways</h3>
-            <p>as someone with more of a ux/front-end background, i intentionally challenged myself to take on backend responsibilities within this project - gaining full-stack development exposure, as well as familiarity with database systems. because i've only had experience building static websites, i've always wondered how people are able to build websites that incorporate log in/log out and track user data. notesync was a key turning point for me - it was the first time i worked on a fully dynamic, full-stack application. working on this project really allowed me to push beyond my comfort zone create more meaningful, impactful saas applications.</p>
-            <DevJourney/>
-            <p style={{ marginTop: "70px"}}>after gaining familiarity with ruby on rails, i realized that the devise gem provided the inner workings behind authentication. i also learned about crud and the 7 restful actions, which play a role in authentication, since a session is essentially being "created" once you log in and "destroyed" once you log out.</p>
-            <Crud/>
-            <Row style={{ marginTop: "40px"}}>
-              <Col className="ml-auto mr-auto text-left" md="6" style={{ marginTop: "40px"}}>
-                <p>in addition to my full-stack software engineering skills, working on notesync also helped me hone my ui/ux skills, teaching me how to design with empathy. i ran the words on our website through an understandability checker to check that all terminology used was understandable for the average person and also made sure that the text sizes were responsive so that people with vision impairments could zoom in and the text size would change accordingly - making our product accessible for a wider audience.</p>
-              </Col>
-              <Col className="ml-auto mr-auto text-center" md="6" style={{ marginTop: "-40px"}}>
-              <img src={require("assets/img/uiux.png")} alt="Tech Stack" className="project-img"/>
-              </Col>
-            </Row>
-            <Row style={{ marginTop: "40px"}}>
-              <Col className="ml-auto mr-auto text-center" md="6" style={{ marginTop: "-40px"}}>
-              <img src={require("assets/img/agile.png")} alt="Tech Stack" width="400" className="project-img"/>
-              </Col>
-              <Col className="ml-auto mr-auto text-left" md="6" style={{ marginTop: "40px"}}>
-                <p>i also noticed that i really like using agile methodology, since it helps break down a large, daunting project into smaller, manageable chunks. sometimes, when i struggled with theory classes, i wondered if cs was for me, but this project made me realize that i like the practical and creative side of cs. i now feel more confident navigating the full stack, and i’m excited to keep building that foundation. i want to pursue a career in ui/ux design or software engineering - one where i can bridge the gap between design and implementation.</p>
-              </Col>
-            </Row>
-            <p>(click on image below to access website)</p>
-            <a
-              href="https://software-studio-d7d9fa70f610.herokuapp.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={NotesyncImage}
-                alt="Notesync Image"
+            <h3 style={{ marginTop: "-40px"}}>architecture</h3>
+            <img
+                src={Architecture}
+                alt="Architecture"
                 className="center-image"
               />
-            </a>
-            <h4>tech stack:</h4>
+            <p>the system follows a simple request–response architecture, with a flask app acting as the orchestration layer between a server-rendered frontend, an external llm api, and an opt-in persistence layer.</p>
+            <p><strong>why this architecture?</strong> i chose a monolithic flask app rather than a microservices architecture to minimize operational complexity and deployment overhead for a demo-scale product.</p>
+            <h3>backend design decisions</h3>
+            <p>for the backend, i decided to use flask and sqlalchemy because it's lightweight, supports chronological history, and respects privacy (optional persistence).</p>
+            <Tradeoffs/>
+            <h3>data privacy</h3>
+            <p><strong>design decision: </strong> only save q&a pairs when users explicitly opt in.</p>
+            <p><strong>why?</strong></p>
             <ul>
-              <li>ruby on rails</li>
-              <li>heroku</li>
-              <li>bootstrap css</li>
-              <li>devise gem (authentication)</li>
-              <li>geocoder gem</li>
-              <li>agile methodology</li>
+              <li>reduces privacy risk</li>
+              <li>aligns with compliance-first messaging</li>
+              <li>avoids storing unnecessary sensitive data</li>
             </ul>
+            <p>being a good engineer isn't just about raw technical ability - but incorporating user empathy and ethics into system design. i implemented this feature via checkbox-based opt-in and conditional database writes database writes only when save == True.</p>
+            <h3>api & ai integration decisions</h3>
+            <p><strong>decision: </strong>use a single-turn completion model with a strong system prompt.</p>
+            <p><strong>why?</strong></p>
+            <ul>
+              <li>predictable outputs</li>
+              <li>easier to control tone and domain expertise</li>
+              <li>avoids storing unnecessary sensitive data</li>
+            </ul>
+           <ApiTradeoffs/>
+           <p>by prompt engineering the phrase "you are an expert in international medical regulation and data compliance..." i constrained the ai's expertise to medical regulation and data compliance to balance accuracy, safety, and predictability in a regulated domain.</p>
+          <h3>frontend architecture</h3>
+          <p>the frontend is built using server-side rendering with flask and jinja, prioritizing simplicity, reliability, and low overhead over rich client-side interactivity.</p>
+          <p>rather than implementing a javascript-heavy spa, i chose an html-first architecture where user input is submitted via a single form and the same template is re-rendered with server-provided state. this keeps the client stateless and reduces frontend complexity.</p>
+          <p>the core interaction flow is intentionally simple: </p>
+          <ul>
+            <li>users submit a compliance question in the text box</li>
+            <li>the backend processes the request and returns a response</li>
+            <li>the page re-renders conditionally with the ai answer displayed</li>
+          </ul>
+          <p>the response container is only rendered when data exists, avoiding placeholder ui and keeping the initial experience focused. for the layout, i decided to use reusable css patterns rather than a framework, which provides visual consistency while keeping the codebase lightweight and easy to extend.</p>
+          <p>overall, this architecture avoids client-side state management and build tooling, enabling faster iteration and easier debugging, but sacrifices advanced interactivity (e.g. streaming responses, multi-turn chat ui) which would be a great stretch goal if this product scaled.</p>
+          <h3>reflection</h3>
+          <Row>
+            <Col className="ml-auto mr-auto text-left" md="6">
+              <p>this project reinforced that effective software engineering is largely about making intentional tradeoffs under real constraints. rather than over-optimizing for scale or complexity, i prioritized clarity, privacy, and maintainability - important for product’s demo scope and regulatory context. designing opt-in data persistence and a predictable ai interaction model pushed me to think beyond implementation details and consider ethical, operational, and long-term implications of technical decisions. overall, this project strengthened my ability to reason about system design holistically, balancing product goals with engineering practicality.</p>
+              </Col>
+              <Col className="ml-auto mr-auto text-center" md="6" style={{ marginTop: "-80px"}}>
+                <img src={require("assets/img/medicalreg.png")} alt="Medical Regulation" className="img-fluid revenue-leak-img"/>
+              </Col>
+            </Row>
           </Container>
         </div>
         <TransparentFooter />
