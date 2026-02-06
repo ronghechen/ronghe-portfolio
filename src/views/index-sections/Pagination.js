@@ -17,9 +17,8 @@ function ExperienceSection() {
               <CardBody>
                 <h4 className="title">₊˚ෆ currently</h4>
                 <p>
-                  building a full-stack ai-powered web app that supports
-                  medical compliance and regulation workflows at{" "}
-                  <strong>openqquantify</strong>
+                  researching and developing a platform that seeks to understand the "why" behind experiential travel at{" "}
+                  <strong>northwestern's dtr lab</strong>
                 </p>
               </CardBody>
             </Card>
@@ -30,9 +29,9 @@ function ExperienceSection() {
               <CardBody>
                 <h4 className="title">⋆°🎧ྀི previously</h4>
                 <p>
-                  designed dashboards and ai workflows for{" "}
-                  <strong>echolab</strong> via {" "}
-                  <strong>product manager accelerator</strong>
+                  built a full-stack ai-powered web app that supports
+                  medical compliance and regulation workflows at{" "}
+                  <strong>openqquantify</strong>
                 </p>
               </CardBody>
             </Card>

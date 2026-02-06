@@ -12,13 +12,13 @@ function BasicElements() {
         <Container>
           <h3 className="title">˚｡⋆୨୧˚about me</h3>
           <p style={{ maxWidth: "1500px", marginTop: "30px" }}>
-            hi! my name is ronghe (she/her) and i'm passionate about the intersection between design and technology. as a junior at northwestern's mccormick school of engineering pursuing a bs in computer science (with a concentration in software engineering), a minor in psychology, and a segal design certificate, i design and develop products that are creative, intuitive, and appeal to user needs.
+            hi! my name is ronghe (she/her) and i'm a junior at northwestern majoring in computer science (with a concentration in software engineering), minoring in psychology, and pursuing a segal design certificate. 
           </p>
           <p style={{ maxWidth: "1500px", marginTop: "30px" }}>
-            with a tech background and strong interest in design, i thrive at the intersection of systems meets experience. as a designer, i'm drawn to complex products where clarity, trust, and thoughtful system feedback matter. as an engineer, i love building user-facing products where design quality and usability are central to the product.
+            i come from a cs background and enjoy thinking about systems end-to-end, but i’ve always gravitated toward human-facing products. while many of my peers preferred backend services or infrastructure, I found myself drawn to the ui layer - not just for aesthetics, but for the challenge of translating complex systems into intuitive, responsive experiences. 
           </p>
           <p style={{ maxWidth: "1500px", marginTop: "30px" }}>
-            as a product-obsessed creative technologist, i'm a problem solver at heart. whether it's a mobile app or a microwave UI, i love analyzing how things work and how to improve their experience and efficiency.
+            as a product-minded engineer and designer, i'm a problem solver at heart. whether it's a mobile app or a microwave ui, i enjoy analyzing how things work under the hood and how to make them work better for people.
           </p>
           <p style = {{ maxWidth: "1500px", marginTop: "30px" }}>things i love:</p>
           <ul style = {{ maxWidth: "1500px", marginTop: "30px" }}>
