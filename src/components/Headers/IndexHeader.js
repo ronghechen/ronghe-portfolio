@@ -57,7 +57,7 @@ function IndexHeader() {
               }}
             >ronghe chen.</h1>
             <h3 style={{ marginBottom: "4rem" }}>
-              software engineer, designer, and product enthusiast.
+              where software meets design.
             </h3>
             
             <p 
@@ -73,7 +73,7 @@ function IndexHeader() {
                 fontSize: "1.1rem" 
               }}
             >
-              i'm a junior at northwestern studying computer science, psychology, and design. i'm passionate about bridging the gap between design and implementation, and my current interests lie in ux design and software engineering (front-end/full-stack).
+              product-obsessed creative technologist studying computer science, psychology, and design. i build intuitive, scalable systems with a focus on frontend engineering, ux, and real-world impact.
             </p>
           </div>
         </Container>
