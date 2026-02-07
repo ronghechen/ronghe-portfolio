@@ -89,6 +89,16 @@ function Projects() {
             </Row>
             <h3>digital art</h3>
             <DigitalArtCarousel/>
+            <h3 style={{marginTop : "40px"}}>screen time visualization ui</h3>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <iframe
+                style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+                width="1200"
+                height="700"
+                src="https://embed.figma.com/design/5E4av5vmsm6fUpe2aw2ixX/Screen-Time-Distribution-UI?embed-host=share"
+                allowFullScreen
+              ></iframe>
+            </div>
           </Container>
         </div>
         <TransparentFooter />
