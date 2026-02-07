@@ -340,4 +340,49 @@
     }
   }
   
-  
+  .things-i-love-section {
+  padding: 70px 0;
+}
+
+.things-i-love-img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (max-width: 768px) {
+  .things-i-love-img {
+    max-width: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .things-i-love-img {
+    max-width: 95px;
+  }
+}
+
+
+.glow-pink:hover {
+  transform: scale(1.1) rotate(-4deg);
+  filter: drop-shadow(0 0 18px rgba(255, 170, 190, 0.7));
+}
+
+.glow-purple:hover {
+  transform: scale(1.1) rotate(4deg);
+  filter: drop-shadow(0 0 18px rgba(190, 160, 255, 0.7));
+}
+
+.glow-blue:hover {
+  transform: scale(1.1) rotate(-4deg);
+  filter: drop-shadow(0 0 18px rgba(150, 210, 255, 0.7));
+}
+
+.digital-art-carousel-wrapper {
+  width: min(92vw, 600px); 
+  margin: 0 auto;     
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "reactstrap";
+import ThingsILove from "./ThingsILove";
 
 function BasicElements() {
   return (
@@ -21,11 +22,7 @@ function BasicElements() {
             as a product-minded engineer and designer, i'm a problem solver at heart. whether it's a mobile app or a microwave ui, i enjoy analyzing how things work under the hood and how to make them work better for people.
           </p>
           <p style = {{ maxWidth: "1500px", marginTop: "30px" }}>things i love:</p>
-          <ul style = {{ maxWidth: "1500px", marginTop: "30px" }}>
-            <li>🧘‍♀️ doing pilates</li>
-            <li>🧋 iced coffee</li>
-            <li>💻 coding my own designs</li>
-          </ul>
+          <ThingsILove/>
         </Container>
       </div>
     </>

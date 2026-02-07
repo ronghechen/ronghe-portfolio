@@ -103,10 +103,6 @@ function Echolab() {
                 <img src={require("assets/img/painptcard.png")} alt="Pain Point Card" className="project-img"/>
                   <div
                     className="image-container"
-                    style={{
-                      backgroundImage:
-                        "url(" + require("assets/img/bg3.jpg") + ")"
-                    }}
                   ></div>
                 </Col>
             </Row>

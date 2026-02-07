@@ -16,6 +16,7 @@ import {
 import IndexNavbar from "components/Navbars/IndexNavbar";
 import ProjectsHeader from "components/Headers/ProjectsHeader.js";
 import TransparentFooter from "components/Footers/TransparentFooter";
+import DigitalArtCarousel from "./DigitalArtCarousel";
 
 function Projects() {
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -58,10 +59,6 @@ function Projects() {
                 <img src={require("assets/img/wanderingskies.png")} alt="Wandering Skies" className="project-img"/>
                   <div
                     className="image-container"
-                    style={{
-                      backgroundImage:
-                        "url(" + require("assets/img/bg3.jpg") + ")"
-                    }}
                   ></div>
                 </Col>
             </Row>
@@ -70,10 +67,6 @@ function Projects() {
                 <img src={require("assets/img/twr.png")} alt="Travel With Ronghe" className="project-img"/>
                   <div
                     className="image-container"
-                    style={{
-                      backgroundImage:
-                        "url(" + require("assets/img/bg3.jpg") + ")"
-                    }}
                   ></div>
                 </Col>
             <Col className="ml-auto mr-auto text-right" md="6" style={{ marginTop: "100px"}}>
@@ -94,6 +87,8 @@ function Projects() {
                     </Button>
               </Col>
             </Row>
+            <h3>digital art</h3>
+            <DigitalArtCarousel/>
           </Container>
         </div>
         <TransparentFooter />
