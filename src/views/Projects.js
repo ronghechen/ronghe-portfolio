@@ -88,8 +88,10 @@ function Projects() {
               </Col>
             </Row>
             <h3>digital art</h3>
+            <p>various digital art pieces spanning self-portraits to collages of edited photographs to color & contrast explorations.</p>
             <DigitalArtCarousel/>
             <h3 style={{marginTop : "40px"}}>screen time visualization ui</h3>
+            <p>a mobile interface concept reimagining app usage analytics. designed to prioritize clarity, hierarchy, and behavioral feedback through visual distribution and micro-metric comparisons.</p>
             <div style={{ display: "flex", justifyContent: "center" }}>
               <iframe
                 style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
@@ -98,6 +100,11 @@ function Projects() {
                 src="https://embed.figma.com/design/5E4av5vmsm6fUpe2aw2ixX/Screen-Time-Distribution-UI?embed-host=share"
                 allowFullScreen
               ></iframe>
+            </div>
+            <h3 style={{marginTop : "40px"}}>refactoring identity</h3>
+            <p>a conceptual ui prototype exploring identity and perception in tech spaces. focused on narrative framing, visual consistency, and metaphor-driven systems thinking.</p>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <iframe style={{border: "1px solid rgba(0, 0, 0, 0.1)" }} width="800" height="450" src="https://embed.figma.com/design/aPNLs8YkP3WQcMqbInUc5g/imagining-my-male-alter-ego?node-id=0-1&embed-host=share" allowfullscreen></iframe>
             </div>
           </Container>
         </div>
