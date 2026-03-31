@@ -29,6 +29,16 @@ function Portfolio() {
   const allProjects = [
     {
       id: 1,
+      title: "softwear.engineer",
+      keywords: ["full-stack dev", "react", "node.js", "aws", "databases"],
+      description: "designed and built softwear engineer, a full-stack fashion lookbook web app that allows users to upload, categorize, and analyze outfits by occasion, vibe, season, and color. implemented an end-to-end image pipeline using aws s3 and sharp for compression and storage, and built a node.js/express backend with a relational database to support filtering, search, and deletion. developed a responsive react frontend with dynamic analytics and similarity-based recommendations, focusing on intuitive organization and personal style exploration.",
+      image: require("assets/img/sw_round.png"),
+      link: "/placeholder",
+      alt: "Softwear Engineer",
+      colOrder: "text-right"
+    },
+    {
+      id: 2,
       title: "product manager accelerator (echolab)",
       keywords: ["ux design", "web", "design systems", "ai", "enterprise software"],
       description: "during my internship at product manager accelerator, i collaborated with developers and PMs to design a B2B SaaS platform called echolab, which utilizes AI to convert raw customer feedback into actionable A/B tests. this project strengthened my skills in design systems, front-end collaboration, and applying user feedback to product strategy.",
@@ -38,7 +48,7 @@ function Portfolio() {
       colOrder: "text-right"
     },
     {
-      id: 2,
+      id: 3,
       title: "notesync",
       keywords: ["full-stack dev", "web", "agile methodologies"],
       description: "for my software studio project, i worked with a group of fellow students on a band calendar called notesync. working on this project honed my skills in full-stack software development, agile methodologies, and designing interfaces.",
@@ -48,7 +58,7 @@ function Portfolio() {
       colOrder: "text-left"
     },
     {
-      id: 3,
+      id: 4,
       title: "transportation app interface",
       keywords: ["ux design", "ux research", "mobile"],
       description: "for my human-computer interaction (cs 330) class, i interviewed a classmate on their transportation habits, as well as their pain points using various transportation apps such as NUTransit and tripshot. after a series of user interviews, i was able to design a wireframe for a transportation app that aligned with their needs.",
@@ -58,7 +68,7 @@ function Portfolio() {
       colOrder: "text-right"
     },
     {
-      id: 4,
+      id: 5,
       title: "openqquantify",
       keywords: ["full-stack dev", "web", "ai integration", "information design"],
       description: "designed and built an ai medical regulation assistant web app, where i implemented the frontend in html/css/js and the backend in flask using openai apis and sqlalchemy. focused on clarity, trust, and information presentation in a regulated domain.",
@@ -118,10 +128,10 @@ function Portfolio() {
     const isEven = index % 2 === 0;
     
     return (
-      <Row key={project.id} className="mb-5">
+      <Row key={project.id} className="mb-5 align-items-center">
         {isEven ? (
           <>
-            <Col className="ml-auto mr-auto" md="6" style={{ marginTop: "100px"}}>
+            <Col className="ml-auto mr-auto" md="6">
               <h3>{project.title}</h3>
               {renderKeywords(project.keywords)}
               <p>{project.description}</p>
@@ -147,7 +157,7 @@ function Portfolio() {
                 <img src={project.image} alt={project.alt} className="img-fluid"/>
               </div>
             </Col>
-            <Col className="ml-auto mr-auto" md="6" style={{ marginTop: "100px"}}>
+            <Col className="ml-auto mr-auto" md="6">
               <h3>{project.title}</h3>
               {renderKeywords(project.keywords)}
               <p>{project.description}</p>
