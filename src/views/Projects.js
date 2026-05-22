@@ -87,6 +87,29 @@ function Projects() {
                     </Button>
               </Col>
             </Row>
+            <Row>
+            <Col className="ml-auto mr-auto text-right" md="6">
+                <h3>contextlayer</h3>
+                <h4>ai-powered fact checker for short-form video</h4>
+                <p>
+                short-form video platforms compress complex statistical and scientific claims into seconds, often stripping away nuance. i prototyped contextlayer, an ai-powered fact checker, to extract claims from video transcripts and corroborates them with external sources without moderating or targeting creators.
+                </p>
+                <Button
+                    outline
+                    color="dark"
+                    className="custom-btn"
+                    href="https://truth-tint-ai.lovable.app/"
+                    >
+                    view project
+                    </Button>
+              </Col>
+            <Col md="6">
+                <img src={require("assets/img/factchecker.png")} alt="Context Layer" className="project-img"/>
+                  <div
+                    className="image-container"
+                  ></div>
+                </Col>
+            </Row>
             <h3>digital art</h3>
             <p>various digital art pieces spanning self-portraits to collages of edited photographs to color & contrast explorations.</p>
             <DigitalArtCarousel/>
@@ -100,11 +123,6 @@ function Projects() {
                 src="https://embed.figma.com/design/5E4av5vmsm6fUpe2aw2ixX/Screen-Time-Distribution-UI?embed-host=share"
                 allowFullScreen
               ></iframe>
-            </div>
-            <h3 style={{marginTop : "40px"}}>refactoring identity</h3>
-            <p>a conceptual ui prototype exploring identity and perception in tech spaces. focused on narrative framing, visual consistency, and metaphor-driven systems thinking.</p>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <iframe style={{border: "1px solid rgba(0, 0, 0, 0.1)" }} width="800" height="450" src="https://embed.figma.com/design/aPNLs8YkP3WQcMqbInUc5g/imagining-my-male-alter-ego?node-id=0-1&embed-host=share" allowfullscreen></iframe>
             </div>
           </Container>
         </div>
