@@ -17,8 +17,8 @@ function ExperienceSection() {
               <CardBody>
                 <h4 className="title">₊˚ෆ currently</h4>
                 <p>
-                  researching and developing a platform that seeks to understand the "why" behind experiential travel at{" "}
-                  <strong>northwestern's dtr lab</strong>
+                  building a talent operations chatbot at{" "}
+                  <strong>cvs health</strong>
                 </p>
               </CardBody>
             </Card>
@@ -29,9 +29,8 @@ function ExperienceSection() {
               <CardBody>
                 <h4 className="title">⋆°🎧ྀི previously</h4>
                 <p>
-                  built a full-stack ai-powered web app that supports
-                  medical compliance and regulation workflows at{" "}
-                  <strong>openqquantify</strong>
+                  researched and developed a platform that seeks to encourage users experientially travel at{" "}
+                  <strong>northwestern's dtr lab</strong>
                 </p>
               </CardBody>
             </Card>
