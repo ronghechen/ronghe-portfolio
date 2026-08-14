@@ -14,12 +14,21 @@ function BasicElements() {
         <Container>
           <h3 className="title">˚｡⋆୨୧˚about me</h3>
           <p style={{ maxWidth: "1500px", marginTop: "30px" }}>
-            hi! my name is <strong>ronghe (she/her)</strong> and i'm a an engineer, designer, and creative techie at heart. 
+            hi! my name is <strong>ronghe (she/her)</strong> and i'm a senior at northwestern pursuing a combined bs/ms degree in computer science, a psychology minor, and a design/digital product certificate.
           </p>
-          <p style={{ maxWidth: "1500px", marginTop: "30px" }}> i’m a rising senior at northwestern pursuing a combined bs/ms degree in computer science, with a minor in psychology and segal design certificate. while studying computer science, i found myself especially drawn to the ui layer - not just for aesthetics, but for the challenge of translating complex systems into intuitive, responsive experiences.</p>
-          <p style={{ maxWidth: "1500px", marginTop: "30px"}}> when i'm not coding or prototyping, i like to express myself through fashion. i love thrifting and building pinterest moodboards to experiment with different aesthetics and visual identities. this interest led me to build <strong>softwear.engineer</strong>, an outfit lookbook web app with filtering, recommendations, and closet analytics.</p>
+          <p style={{ maxWidth: "1500px", marginTop: "30px" }}> at <strong>cvs health</strong>, i worked at the intersection of software, ai, and employee experience, building an internal ai assistant, backend services, and workflow automations. beyond cvs, my experience spans full-stack engineering and ui/ux design at startups, where i've built ai-integrated applications and designed b2b saas products.</p>
+          <p style={{ maxWidth: "1500px", marginTop: "30px"}}> i've always been a very visual person, so when i started studying computer science, i naturally gravitated toward the ui layer - where code becomes something you can see, interact with, and experience. that same love of visual expression shapes my interest in fashion and inspired me to build <strong>softwear.engineer</strong>, a full-stack digital lookbook that brings together two things i love: software and personal style.</p>
           <p style={{ maxWidth: "1500px", marginTop: "30px" }}>
-            i’m also deeply hands-on in other areas: from cooking & baking (savory > sweet) to staying active through pilates and dance workouts. i’m drawn to anything that blends creativity, iteration, and intentional design.
+            some of my hobbies include: doing pilates, traveling and{" "}
+          <a
+            href="https://travelwithronghe.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-link"
+          >
+            writing about my adventures
+          </a>
+            , or rating every restaurant i try on beli.
           </p>
           <h3>featured project: softwear.engineer</h3>
           <a

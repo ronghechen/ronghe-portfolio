@@ -386,3 +386,14 @@
   width: min(92vw, 600px); 
   margin: 0 auto;     
 }
+
+p a.inline-link {
+  color: #A64D79 !important;
+  text-decoration: none;
+}
+
+p a.inline-link:hover {
+  color: #7D3C98 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

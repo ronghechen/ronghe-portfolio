@@ -73,7 +73,7 @@ function IndexHeader() {
                 fontSize: "1.1rem" 
               }}
             >
-              product-obsessed creative technologist studying computer science, psychology, and design. i build intuitive, scalable systems with a focus on frontend engineering, ux, and real-world impact.
+              product-obsessed software engineer and creative technologist building at the intersection of code, design, and human behavior. 
             </p>
           </div>
         </Container>
