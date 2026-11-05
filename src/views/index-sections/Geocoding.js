@@ -1,7 +1,7 @@
 import React from 'react';
 import fastImg from 'assets/img/fast_geocoding.png';
 import slowImg from 'assets/img/slow_geocoding.png';
-import Row from "reactstrap";
+import { Row } from 'reactstrap';
 
 function Geocoding() {
     return (
