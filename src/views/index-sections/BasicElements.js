@@ -1,7 +1,6 @@
 import React from "react";
-import { Container } from "reactstrap";
-import ThingsILove from "./ThingsILove";
-import SoftwearImg from "assets/img/softwear.png";
+import { Container, Button } from "reactstrap";
+import HolographicLaptop from "../HolographicLaptop";
 
 function BasicElements() {
   return (
@@ -30,18 +29,44 @@ function BasicElements() {
           </a>
             , or rating every restaurant i try on beli.
           </p>
-          <h3>featured project: softwear.engineer</h3>
-          <a
-              href="https://softwear-engineer.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={SoftwearImg}
-                alt="Softwear Engineer Image"
-                className="center-image"
-              />
-            </a>
+          <div className="featured-project-section">
+            <div className="featured-project-layout">
+
+              {/* LEFT: Project information */}
+              <div className="featured-project-info">
+                <p className="featured-project-label intel-mono">
+                  FEATURED PROJECT
+                </p>
+
+                <h3 className="featured-project-title">
+                  softwear.engineer 💻
+                </h3>
+
+                <p className="featured-project-description">
+                  a full-stack fashion lookbook web app that allows you to
+                  upload, categorize, and analyze outfits by occasion,
+                  vibe, color, and season.
+                </p>
+
+                <Button
+                  outline
+                  color="dark"
+                  className="custom-btn"
+                  href="https://softwear-engineer.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  VIEW LIVE ↗
+                </Button>
+              </div>
+
+              {/* RIGHT: 3D Laptop */}
+              <div className="featured-project-visual">
+                <HolographicLaptop />
+              </div>
+
+            </div>
+          </div>
           {/*<p style = {{ maxWidth: "1500px", marginTop: "30px" }}><strong>things i love:</strong></p>
           <ThingsILove/>*/}
 

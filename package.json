@@ -3,9 +3,11 @@
   "version": "1.5.2",
   "private": true,
   "dependencies": {
+    "@react-three/drei": "^8.20.2",
+    "@react-three/fiber": "^7.0.29",
     "ajv": "^8.17.1",
     "bootstrap": "^4.6.2",
-    "framer-motion": "^12.33.0",
+    "framer-motion": "^6.5.1",
     "moment": "2.29.4",
     "nouislider": "15.4.0",
     "react": "^17.0.2",
@@ -15,7 +17,8 @@
     "react-router-dom": "6.11.1",
     "react-scripts": "^5.0.1",
     "reactstrap": "^8.10.0",
-    "sass": "1.62.1"
+    "sass": "1.62.1",
+    "three": "^0.150.1"
   },
   "scripts": {
     "start": "react-scripts start",

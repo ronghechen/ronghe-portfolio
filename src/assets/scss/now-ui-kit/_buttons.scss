@@ -1,5 +1,8 @@
 .btn,
-.navbar .navbar-nav > a.btn{
+.navbar .navbar-nav > a.btn {
+    font-family: "Intel One Mono", monospace !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     border-width: $border-thick;
     font-weight: $font-weight-normal;
     font-size: $font-size-small;
