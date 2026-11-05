@@ -35,7 +35,7 @@ function PortfolioHeader() {
               <p className="category category-absolute"
                   style={{marginTop: "100px", fontWeight: 400 }}
               >
-                 self-directed explorations in engineering, visuals, and interaction.
+                 creative experiments, travel, and personal projects.
               </p>
             </Container>
           </div>
