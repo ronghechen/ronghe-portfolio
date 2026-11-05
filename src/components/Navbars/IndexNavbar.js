@@ -82,8 +82,8 @@ function IndexNavbar() {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/projects" className="nav-link-hover">
-                  <p className="navbar-text">projects</p>
+                <NavLink href="/play" className="nav-link-hover">
+                  <p className="navbar-text">play</p>
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -111,8 +111,8 @@ function IndexNavbar() {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/projects" onClick={handleNavClick} className="mobile-nav-link">
-                <p className="navbar-text">projects</p>
+              <NavLink href="/play" onClick={handleNavClick} className="mobile-nav-link">
+                <p className="navbar-text">play</p>
               </NavLink>
             </NavItem>
             <NavItem>

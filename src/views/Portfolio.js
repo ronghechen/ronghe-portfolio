@@ -59,12 +59,12 @@ function Portfolio() {
     },
     {
       id: 4,
-      title: "transportation app interface",
-      keywords: ["ux design", "ux research", "mobile"],
-      description: "for my human-computer interaction (cs 330) class, i interviewed a classmate on their transportation habits, as well as their pain points using various transportation apps such as NUTransit and tripshot. after a series of user interviews, i was able to design a wireframe for a transportation app that aligned with their needs.",
-      image: require("assets/img/transport app.png"),
-      link: "/nu-transport-app",
-      alt: "Transportation App",
+      title: "wandering skies",
+      keywords: ["graphics", "webgl", "frontend"],
+      description: " wandering skies is an interactive sky scene built using javascript and webgl, deployed on vercel, customizing the ui with html/css. users can toggle between 3 times of day (day, sunset, night) and 2 different shading modes (phong, toon w/ purple tint).",
+      image: require("assets/img/wanderingskies.png"),
+      link: "https://wanderingskies.vercel.app/",
+      alt: "Wandering Skies",
       colOrder: "text-right"
     },
     {

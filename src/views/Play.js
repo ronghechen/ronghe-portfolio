@@ -18,7 +18,7 @@ import ProjectsHeader from "components/Headers/ProjectsHeader.js";
 import TransparentFooter from "components/Footers/TransparentFooter";
 import DigitalArtCarousel from "./DigitalArtCarousel";
 
-function Projects() {
+function Play() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
   React.useEffect(() => {
@@ -39,29 +39,6 @@ function Projects() {
         <ProjectsHeader />
         <div className="section section-about-us">
           <Container>
-            <Row>
-            <Col className="ml-auto mr-auto text-right" md="6" style={{ marginTop: "100px"}}>
-                <h3>wandering skies</h3>
-                <h4>creative coding</h4>
-                <p>
-                wandering skies is an interactive sky scene built using javascript and webgl, deployed on vercel, customizing the ui with html/css. users can toggle between 3 times of day (day, sunset, night) and 2 different shading modes (phong, toon w/ purple tint).
-                </p>
-                <Button
-                    outline
-                    color="dark"
-                    className="custom-btn"
-                    href="https://wanderingskies.vercel.app/"
-                    >
-                    view project
-                    </Button>
-              </Col>
-            <Col md="6">
-                <img src={require("assets/img/wanderingskies.png")} alt="Wandering Skies" className="project-img"/>
-                  <div
-                    className="image-container"
-                  ></div>
-                </Col>
-            </Row>
             <Row>
             <Col md="6">
                 <img src={require("assets/img/twr.png")} alt="Travel With Ronghe" className="project-img"/>
@@ -132,4 +109,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Play;

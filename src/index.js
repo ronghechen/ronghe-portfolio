@@ -16,7 +16,7 @@ import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import Portfolio from "views/Portfolio.js";
-import Projects from "views/Projects.js";
+import Play from "views/Play.js";
 import Echolab from "views/Echolab.js";
 import Notesync from "views/Notesync.js";
 import Placeholder from "views/Placeholder";
@@ -28,7 +28,7 @@ const pages = {
   "/nucleo-icons": NucleoIcons,
   "/profile-page": ProfilePage,
   "/portfolio": Portfolio,
-  "/projects": Projects,
+  "/play": Play,
   "/echolab": Echolab,
   "/notesync": Notesync,
   "/placeholder": Placeholder,
