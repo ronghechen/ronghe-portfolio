@@ -60,34 +60,36 @@ function IndexHeader() {
               where software meets design.
             </h3>
             
-            <p 
-              style={{ 
-                fontWeight: 350,
-                opacity: 0.7,
-                maxWidth: "1000px", 
-                margin: "0 auto",
-                width: "100%",
-                textAlign: "center",
-                padding: "0 2rem", 
-                lineHeight: "1.6",
-                fontSize: "1.1rem" 
-              }}
-            >
-              software engineer x creative technologist
-            </p>
-            <p 
-              style={{ 
-                fontWeight: 350,
-                opacity: 0.7,
-                maxWidth: "1000px", 
-                margin: "0 auto",
-                width: "100%",
-                textAlign: "center",
-                padding: "0 2rem", 
-                lineHeight: "1.6",
-                fontSize: "1.1rem" 
-              }}
-            >
+            <p
+            className="intel-mono"
+            style={{
+              fontWeight: 400,
+              opacity: 0.85,
+              maxWidth: "1000px",
+              margin: "0 auto",
+              width: "100%",
+              textAlign: "center",
+              padding: "0 2rem",
+              lineHeight: "1.6",
+              fontSize: "1.1rem"
+            }}
+          >
+            software engineer x creative technologist
+          </p>
+            <p
+            className="intel-mono"
+            style={{
+              fontWeight: 400,
+              opacity: 0.85,
+              maxWidth: "1000px",
+              margin: "0 auto",
+              width: "100%",
+              textAlign: "center",
+              padding: "0 2rem",
+              lineHeight: "1.6",
+              fontSize: "1.1rem"
+            }}
+          >
               ai applications / interactive experiences / consumer tech
             </p>
           </div>

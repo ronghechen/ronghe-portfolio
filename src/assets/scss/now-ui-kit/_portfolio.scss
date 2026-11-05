@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@400;500;600;700&display=swap');
+
 .project-img {
     display: block;
     margin: 0 auto;
@@ -13,6 +15,13 @@
       cursor: pointer;
     }
   }
+
+.intel-mono {
+  font-family: 'Intel One Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-weight: 300;
+}
   
   .project-img:hover {
     animation: float 2s ease-in-out infinite;

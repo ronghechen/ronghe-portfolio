@@ -92,18 +92,19 @@ body{
         opacity: 0.4;
   }
 }
+  .navbar-text {
+    font-family: 'Intel One Mono', monospace !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em;
+    font-weight: 400;
 
-.navbar-text {
-    color: white; 
-    text-transform: none;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-  
     &:hover {
-      opacity: 0.4;
-      text-decoration: none; 
-    }
+        opacity: 0.4;
+        text-decoration: none; 
+      }
   }
+
+
 
   .loading-screen {
     position: fixed;

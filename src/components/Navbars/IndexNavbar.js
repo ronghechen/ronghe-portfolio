@@ -123,7 +123,7 @@ function IndexNavbar() {
                 onClick={handleNavClick}
                 className="mobile-nav-link"
               >
-                <p className="navbar-text">resume</p>
+                <p className="navbar-text intel-mono">resume</p>
               </NavLink>
             </NavItem>
           </Nav>
