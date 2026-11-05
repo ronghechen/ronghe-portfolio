@@ -14,7 +14,7 @@ import Images from "./index-sections/Images.js";
 import BasicElements from "./index-sections/BasicElements.js";
 import Navbars from "./index-sections/Navbars.js";
 import Tabs from "./index-sections/Tabs.js";
-import Pagination from "./index-sections/Pagination.js";
+import Interests from "./index-sections/Interests.js";
 import Notifications from "./index-sections/Notifications.js";
 import Typography from "./index-sections/Typography.js";
 import Javascript from "./index-sections/Javascript.js";
@@ -45,7 +45,7 @@ function Index() {
         <div className="main">
           <Images />
           <BasicElements />
-          <Pagination/>
+          <Interests/>
         </div>
         <TransparentFooter />
       </div>

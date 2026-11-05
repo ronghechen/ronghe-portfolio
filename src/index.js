@@ -21,6 +21,7 @@ import Echolab from "views/Echolab.js";
 import Notesync from "views/Notesync.js";
 import Placeholder from "views/Placeholder";
 import OpenQQuantify from "views/OpenQQuantify.js";
+import MusicPlayer from "components/MusicPlayer";
 
 const pages = {
   "/index": Index,
@@ -36,16 +37,25 @@ const pages = {
 
 ReactDOM.render(
   <BrowserRouter>
-    <Routes>
-      {Object.entries(pages).map(([path, Component]) => (
+    <>
+      <Routes>
+        {Object.entries(pages).map(([path, Component]) => (
+          <Route
+            key={path}
+            path={path}
+            element={React.createElement(withPageLoader(Component))}
+          />
+        ))}
+
         <Route
-          key={path}
-          path={path}
-          element={React.createElement(withPageLoader(Component))}
+          path="*"
+          element={<Navigate to="/index" replace />}
         />
-      ))}
-      <Route path="*" element={<Navigate to="/index" replace />} />
-    </Routes>
+      </Routes>
+
+      {/* Persistent glassmorphic music player */}
+      <MusicPlayer />
+    </>
   </BrowserRouter>,
   document.getElementById("root")
 );

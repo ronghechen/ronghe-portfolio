@@ -1,0 +1,206 @@
+.interests-section {
+  position: relative;
+  width: 100%;
+  min-height: 650px;
+  overflow: hidden;
+
+  // Let the existing page background show through
+  background: transparent !important;
+}
+
+.interests-container {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  margin: 0 auto;
+}
+
+.interests-heading {
+  position: absolute;
+  top: 45px;
+  left: 15px;
+  z-index: 5;
+
+  font-family: "Intel One Mono", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: white;
+}
+
+.interests-stars {
+  position: absolute;
+  width: 48%;
+  height: 70%;
+  left: 28%;
+  top: 17%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.interest-blob {
+  position: absolute;
+  z-index: 3;
+
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 35% 20%,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.075) 55%,
+      rgba(255, 255, 255, 0.11)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    inset 0 1px 15px rgba(255, 255, 255, 0.08),
+    0 10px 35px rgba(0, 0, 0, 0.1);
+
+  animation: blobFloat 6s ease-in-out infinite;
+  transition:
+    background 0.4s ease,
+    box-shadow 0.4s ease,
+    scale 0.4s ease;
+
+  span {
+    white-space: pre-line;
+    font-family: "Montserrat", monospace;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #fff;
+  }
+
+  &:hover {
+    scale: 1.08;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+      inset 0 0 25px rgba(255, 255, 255, 0.15),
+      0 0 35px rgba(217, 160, 255, 0.25);
+  }
+}
+
+// Desktop positioning
+.interest-1 {
+  top: 8%;
+  left: 30%;
+  animation-delay: 0s;
+}
+
+.interest-2 {
+  top: 11%;
+  left: 59%;
+  animation-delay: -1s;
+}
+
+.interest-3 {
+  top: 37%;
+  left: 13%;
+  animation-delay: -2s;
+}
+
+.interest-4 {
+  top: 40%;
+  right: 12%;
+  animation-delay: -3s;
+}
+
+.interest-5 {
+  bottom: 7%;
+  left: 23%;
+  animation-delay: -1.5s;
+}
+
+.interest-6 {
+  bottom: 7%;
+  right: 31%;
+  animation-delay: -2.5s;
+}
+
+@keyframes blobFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+// Tablet
+@media (max-width: 991px) {
+  .interest-blob {
+    width: 125px;
+    height: 125px;
+
+    span {
+      font-size: 13px;
+    }
+  }
+
+  .interests-stars {
+    width: 55%;
+    left: 23%;
+  }
+}
+
+// Mobile
+@media (max-width: 600px) {
+  .interests-section {
+    min-height: 700px;
+  }
+
+  .interests-container {
+    height: 700px;
+  }
+
+  .interests-heading {
+    top: 30px;
+    left: 6%;
+    font-size: 14px;
+  }
+
+  .interest-blob {
+    width: 105px;
+    height: 105px;
+
+    span {
+      font-size: 11px;
+    }
+  }
+
+  .interests-stars {
+    width: 95%;
+    height: 45%;
+    left: 2.5%;
+    top: 25%;
+  }
+
+  .interest-1 { top: 12%; left: 12%; }
+  .interest-2 { top: 12%; left: 63%; }
+  .interest-3 { top: 36%; left: 2%; }
+  .interest-4 { top: 38%; right: 2%; }
+  .interest-5 { bottom: 8%; left: 12%; }
+  .interest-6 { bottom: 8%; right: 12%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interest-blob {
+    animation: none;
+    transition: none;
+  }
+}

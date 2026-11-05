@@ -20,7 +20,6 @@ function LaptopScreen({ image }) {
 
   return (
     <group position={[0, 1.35, -0.96]}>
-      {/* Metallic lid */}
       <RoundedBox args={[3.35, 2.2, 0.12]} radius={0.09}>
         <meshPhysicalMaterial
           color="#c4c5ff"
@@ -31,19 +30,17 @@ function LaptopScreen({ image }) {
         />
       </RoundedBox>
 
-      {/* Dark screen bezel */}
+
       <mesh position={[0, 0, 0.068]}>
         <planeGeometry args={[3.12, 1.98]} />
         <meshBasicMaterial color="#080510" />
       </mesh>
 
-      {/* Replaceable project screenshot */}
       <mesh position={[0, 0, 0.072]}>
         <planeGeometry args={[2.94, 1.72]} />
         <meshBasicMaterial map={texture} toneMapped={false} />
       </mesh>
 
-      {/* Webcam */}
       <mesh position={[0, 1.02, 0.073]}>
         <circleGeometry args={[0.018, 16]} />
         <meshBasicMaterial color="#6d60ba" />
@@ -88,7 +85,6 @@ function Keyboard() {
         </RoundedBox>
       ))}
 
-      {/* Trackpad */}
       <RoundedBox
         args={[1.15, 0.006, 0.53]}
         radius={0.055}
@@ -107,7 +103,6 @@ function Keyboard() {
 function LaptopModel({ image }) {
   return (
     <group rotation={[0, -0.3, 0]}>
-      {/* Base */}
       <RoundedBox
         args={[3.55, 0.16, 2.45]}
         radius={0.11}
@@ -122,7 +117,6 @@ function LaptopModel({ image }) {
         />
       </RoundedBox>
 
-      {/* Holographic top surface */}
       <mesh position={[0, 0.083, 0]} rotation={[-Math.PI / 2, 0, 0]}>
         <planeGeometry args={[3.25, 2.2]} />
         <meshPhysicalMaterial

@@ -24,14 +24,8 @@ function IndexHeader() {
 
   return (
     <>
-      <div className="page-header clear-filter" filter-color="red">
-        <div
-          className="page-header-image"
-          style={{
-            backgroundImage: "url(" + require("assets/img/header.jpg") + ")"
-          }}
-          ref={pageHeader}
-        ></div>
+      <div className="page-header video-hero">
+        <div className="page-header-image" ref={pageHeader}></div>
         <Container>
           <div 
             className="content-center brand"

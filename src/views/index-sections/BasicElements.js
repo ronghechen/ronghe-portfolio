@@ -51,7 +51,7 @@ function BasicElements() {
                 <Button
                   outline
                   color="dark"
-                  className="custom-btn"
+                  className="btn-round btn-glass"
                   href="https://softwear-engineer.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"

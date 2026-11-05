@@ -22,28 +22,26 @@ function PortfolioHeader() {
     }
   });
   return (
-    <>
-      <div className="page-header page-header-small">
-        <div
-          className="page-header-image"
-          style={{
-            backgroundImage: "url(" + require("assets/img/header.jpg") + ")"
-          }}
-          ref={pageHeader}
-        ></div>
-        <div className="content-center">
-          <Container>
-            <h3>⋆˚࿔ work 𝜗𝜚˚⋆</h3>
-            <p className="category category-absolute"
+  <>
+    <div className="page-header page-header-small video-hero">
+      <div
+        className="page-header-image"
+        ref={pageHeader}
+      ></div>
+
+      <div className="content-center">
+        <Container>
+          <h3>⋆˚࿔ work 𝜗𝜚˚⋆</h3>
+          <p className="category category-absolute"
               style={{marginTop: "100px", fontWeight: 400 }}
           >
               projects completed in academic, internship, and team-based environments focused on real users, constraints, and production considerations. click tags to filter by theme.
           </p>
-          </Container>
-        </div>
+        </Container>
       </div>
-    </>
-  );
+    </div>
+  </>
+);
 }
 
 export default PortfolioHeader;

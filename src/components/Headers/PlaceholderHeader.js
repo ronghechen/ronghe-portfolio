@@ -23,14 +23,12 @@ function PlaceholderHeader() {
   });
   return (
     <>
-      <div className="page-header page-header-small">
+      <div className="page-header page-header-small video-hero">
         <div
           className="page-header-image"
-          style={{
-            backgroundImage: "url(" + require("assets/img/header.jpg") + ")"
-          }}
           ref={pageHeader}
         ></div>
+
         <div className="content-center">
           <Container>
             <h3>⋆˚࿔ wip 𝜗𝜚˚⋆</h3>

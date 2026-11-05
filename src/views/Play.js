@@ -55,7 +55,7 @@ function Play() {
                 <Button
                     outline
                     color="dark"
-                    className="custom-btn"
+                    className="btn-round btn-glass"
                     href="https://travelwithronghe.netlify.app/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -74,7 +74,7 @@ function Play() {
                 <Button
                     outline
                     color="dark"
-                    className="custom-btn"
+                    className="btn-round btn-glass"
                     href="https://truth-tint-ai.lovable.app/"
                     >
                     view project

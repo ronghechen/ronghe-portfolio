@@ -7,9 +7,9 @@ body{
     -webkit-font-smoothing: antialiased;
 }
 
-.main{
+.main {
     position: relative;
-    background: $white-color;
+    background: transparent !important;
 }
 /* Animations */
 .nav-pills .nav-link,
@@ -155,3 +155,204 @@ body{
     to { opacity: 1; }
   }
   
+html,
+body,
+#root {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100%;
+}
+
+.page-header {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+/* Remove original hero background */
+.page-header.video-hero {
+  background: transparent !important;
+  background-image: none !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Hide the old background image layer */
+.video-hero .page-header-image {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* Remove inherited overlay */
+.video-hero::before,
+.video-hero::after {
+  background: none !important;
+}
+
+/* Keep the video behind the React app */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+}
+
+.video-background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+
+  video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+/* Make the hero transparent */
+.page-header.video-hero {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* Remove old image background */
+.video-hero .page-header-image {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* Remove any remaining overlay */
+.video-hero::before,
+.video-hero::after {
+  background: none !important;
+}
+
+/* Allow the video to show behind the homepage */
+body,
+#root,
+.wrapper,
+.main,
+.section {
+  background-color: transparent !important;
+}
+
+/* Remove background images from content containers */
+.main,
+.section {
+  background-image: none !important;
+}
+
+/* Keep video behind everything */
+.video-background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/*White text for video background*/
+
+#root {
+  color: #ffffff;
+}
+
+/* All headings */
+#root h1,
+#root h2,
+#root h3,
+#root h4,
+#root h5,
+#root h6 {
+  color: #ffffff !important;
+}
+
+/* Paragraphs and descriptions */
+#root p,
+#root .description,
+#root .lead {
+  color: #ffffff !important;
+}
+
+/* Labels and small text */
+#root .intel-mono,
+#root .featured-label,
+#root small {
+  color: #ffffff !important;
+}
+
+/* Links */
+#root a {
+  color: #ffffff;
+}
+
+/* Outline buttons */
+#root .btn-outline-default,
+#root .btn-outline-primary {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+/* Button hover */
+#root .btn-outline-default:hover,
+#root .btn-outline-primary:hover {
+  background-color: #ffffff !important;
+  color: #171022 !important;
+}
+
+/* Glassmorphic technology tags */
+.tag-btn.btn-glass {
+  padding: 8px 18px !important;
+  font-size: 0.75rem !important;
+  font-family: "Intel One Mono", monospace !important;
+  font-weight: 400 !important;
+
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.10) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  border-radius: 50px !important;
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  cursor: pointer;
+}
+
+/* Hover */
+.tag-btn.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border-color: rgba(255, 255, 255, 0.65) !important;
+  color: #ffffff !important;
+}
+
+/* Selected filter */
+.tag-btn.btn-glass.tag-btn-active {
+  background: rgba(255, 255, 255, 0.35) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  color: #ffffff !important;
+
+  box-shadow: 0 0 16px rgba(255, 190, 255, 0.25);
+}

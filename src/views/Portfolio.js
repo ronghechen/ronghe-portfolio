@@ -101,7 +101,7 @@ function Portfolio() {
 
   const TagButton = ({ keyword, isActive, onClick }) => (
     <button
-      className={`tag-btn ${isActive ? 'tag-btn-active' : ''}`}
+      className={`tag-btn btn-glass ${isActive ? 'tag-btn-active' : ''}`}
       onClick={(e) => {
         e.stopPropagation();
         onClick(keyword);
@@ -136,9 +136,7 @@ function Portfolio() {
               {renderKeywords(project.keywords)}
               <p>{project.description}</p>
               <Button
-                outline
-                color="dark"
-                className="custom-btn"
+                className="btn-round btn-glass"
                 href={project.link}
               >
                 view project
@@ -162,9 +160,7 @@ function Portfolio() {
               {renderKeywords(project.keywords)}
               <p>{project.description}</p>
               <Button
-                outline
-                color="dark"
-                className="custom-btn"
+                className="btn-round btn-glass"
                 href={project.link}
               >
                 view project
@@ -187,7 +183,15 @@ function Portfolio() {
               <div className="active-filters-card">
                 <div className="d-flex justify-content-between align-items-start mb-3">
                   <div>
-                    <h6 className="mb-2" style={{ fontWeight: 600, color: '#333' }}>Active filters:</h6>
+                    <h6
+                      className="mb-2"
+                      style={{
+                        fontWeight: 600,
+                        color: "#ffffff"
+                      }}
+                    >
+                      active filters:
+                    </h6>
                     <div className="d-flex flex-wrap gap-2">
                       {selectedKeywords.map(keyword => (
                         <button
