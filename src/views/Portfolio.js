@@ -43,6 +43,7 @@ function Portfolio() {
       keywords: ["ux design", "web", "design systems", "ai", "enterprise software"],
       description: "during my internship at product manager accelerator, i collaborated with developers and PMs to design a B2B SaaS platform called echolab, which utilizes AI to convert raw customer feedback into actionable A/B tests. this project strengthened my skills in design systems, front-end collaboration, and applying user feedback to product strategy.",
       image: require("assets/img/echolab_round.png"),
+      buttonText: "read more",
       link: "/echolab",
       alt: "Echolab project",
       colOrder: "text-right"
@@ -136,11 +137,11 @@ function Portfolio() {
               {renderKeywords(project.keywords)}
               <p>{project.description}</p>
               <Button
-                className="btn-round btn-glass"
-                href={project.link}
-              >
-                view project
-              </Button>
+              className="btn-round btn-glass"
+              href={project.link}
+            >
+              {project.buttonText || "view live"}
+            </Button>
             </Col>
             <Col md="6">
               <div className="project-img">

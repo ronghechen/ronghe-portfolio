@@ -35,7 +35,7 @@ function PortfolioHeader() {
               <p className="category category-absolute"
                   style={{marginTop: "100px", fontWeight: 400 }}
               >
-                 creative experiments, travel, and personal projects.
+                just for fun.
               </p>
             </Container>
           </div>
