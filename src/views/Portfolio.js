@@ -31,9 +31,9 @@ function Portfolio() {
       id: 1,
       title: "softwear.engineer",
       keywords: ["full-stack dev", "react", "node.js", "aws", "databases"],
-      description: "designed and built softwear engineer, a full-stack fashion lookbook web app that allows users to upload, categorize, and analyze outfits by occasion, vibe, season, and color. implemented an end-to-end image pipeline using aws s3 and sharp for compression and storage, and built a node.js/express backend with a relational database to support filtering, search, and deletion. developed a responsive react frontend with dynamic analytics and similarity-based recommendations, focusing on intuitive organization and personal style exploration.",
+      description: "a full-stack fashion lookbook web app that allows you to upload, categorize, and analyze outfits by occasion, vibe, color, and season.",
       image: require("assets/img/sw_round.png"),
-      link: "/placeholder",
+      link: "https://softwear-engineer.vercel.app/",
       alt: "Softwear Engineer",
       colOrder: "text-right"
     },
@@ -41,7 +41,7 @@ function Portfolio() {
       id: 2,
       title: "product manager accelerator (echolab)",
       keywords: ["ux design", "web", "design systems", "ai", "enterprise software"],
-      description: "during my internship at product manager accelerator, i collaborated with developers and PMs to design a B2B SaaS platform called echolab, which utilizes AI to convert raw customer feedback into actionable A/B tests. this project strengthened my skills in design systems, front-end collaboration, and applying user feedback to product strategy.",
+      description: "during my internship at product manager accelerator, i collaborated with developers and PMs to design a B2B SaaS platform called echolab, which utilizes AI to convert raw customer feedback into actionable A/B tests.",
       image: require("assets/img/echolab_round.png"),
       buttonText: "read more",
       link: "/echolab",
@@ -50,16 +50,6 @@ function Portfolio() {
     },
     {
       id: 3,
-      title: "notesync",
-      keywords: ["full-stack dev", "web", "agile methodologies"],
-      description: "for my software studio project, i worked with a group of fellow students on a band calendar called notesync. working on this project honed my skills in full-stack software development, agile methodologies, and designing interfaces.",
-      image: require("assets/img/notesync_round.png"),
-      link: "/notesync",
-      alt: "Notesync",
-      colOrder: "text-left"
-    },
-    {
-      id: 4,
       title: "wandering skies",
       keywords: ["graphics", "webgl", "frontend"],
       description: " wandering skies is an interactive sky scene built using javascript and webgl, deployed on vercel, customizing the ui with html/css. users can toggle between 3 times of day (day, sunset, night) and 2 different shading modes (phong, toon w/ purple tint).",
@@ -69,10 +59,10 @@ function Portfolio() {
       colOrder: "text-right"
     },
     {
-      id: 5,
+      id: 4,
       title: "openqquantify",
       keywords: ["full-stack dev", "web", "ai integration", "information design"],
-      description: "designed and built an ai medical regulation assistant web app, where i implemented the frontend in html/css/js and the backend in flask using openai apis and sqlalchemy. focused on clarity, trust, and information presentation in a regulated domain.",
+      description: "designed and built an ai medical regulation assistant web app, where i implemented the frontend in html/css/js and the backend in flask using openai apis and sqlalchemy.",
       image: require("assets/img/openqquantify.png"),
       link: "/openqquantify",
       alt: "OpenQQuantify",
@@ -137,11 +127,11 @@ function Portfolio() {
               {renderKeywords(project.keywords)}
               <p>{project.description}</p>
               <Button
-              className="btn-round btn-glass"
-              href={project.link}
-            >
-              {project.buttonText || "view live"}
-            </Button>
+            className="btn-round btn-glass"
+            href={project.link}
+          >
+            {project.id === 2 ? "read more" : "view live ↗"}
+          </Button>
             </Col>
             <Col md="6">
               <div className="project-img">
@@ -164,7 +154,7 @@ function Portfolio() {
                 className="btn-round btn-glass"
                 href={project.link}
               >
-                view project
+                {project.id === 2 ? "read more" : "view live ↗"}
               </Button>
             </Col>
           </>
