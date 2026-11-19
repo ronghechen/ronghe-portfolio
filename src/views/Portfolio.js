@@ -58,16 +58,6 @@ function Portfolio() {
       alt: "Wandering Skies",
       colOrder: "text-right"
     },
-    {
-      id: 4,
-      title: "openqquantify",
-      keywords: ["full-stack dev", "web", "ai integration", "information design"],
-      description: "designed and built an ai medical regulation assistant web app, where i implemented the frontend in html/css/js and the backend in flask using openai apis and sqlalchemy.",
-      image: require("assets/img/openqquantify.png"),
-      link: "/openqquantify",
-      alt: "OpenQQuantify",
-      colOrder: "text-left"
-    }
   ];
 
   const filteredProjects = useMemo(() => {
