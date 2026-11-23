@@ -17,7 +17,6 @@ import NucleoIcons from "views/NucleoIcons.js";
 import Portfolio from "views/Portfolio.js";
 import Play from "views/Play.js";
 import Echolab from "views/Echolab.js";
-import Notesync from "views/Notesync.js";
 import Placeholder from "views/Placeholder";
 import OpenQQuantify from "views/OpenQQuantify.js";
 import MusicPlayer from "components/MusicPlayer";
@@ -28,7 +27,6 @@ const pages = {
   "/portfolio": Portfolio,
   "/play": Play,
   "/echolab": Echolab,
-  "/notesync": Notesync,
   "/placeholder": Placeholder,
   "/openqquantify": OpenQQuantify,
 };

@@ -14,14 +14,14 @@ import {
 
 const items = [
   {
-    src: require("assets/img/agile.png"),
-    altText: "Nature, United States",
-    caption: "Nature, United States"
-  },
-  {
     src: require("assets/img/architecture.png"),
     altText: "Somewhere Beyond, United States",
     caption: "Somewhere Beyond, United States"
+  },
+  {
+    src: require("assets/img/heart.png"),
+    altText: "Yellowstone National Park, United States",
+    caption: "Yellowstone National Park, United States"
   },
   {
     src: require("assets/img/heart.png"),

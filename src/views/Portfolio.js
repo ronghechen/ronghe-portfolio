@@ -58,6 +58,16 @@ function Portfolio() {
       alt: "Wandering Skies",
       colOrder: "text-right"
     },
+    {
+      id: 4,
+      title: "the ronghe edit",
+      keywords: ["next.js", "typescript", "full-stack dev", "ux design", "branding"],
+      description: "a full-stack product discovery and curation platform for exploring my personal recommendations across fashion, beauty, tech, and lifestyle.",
+      image: require("assets/img/the_ronghe_edit_round.png"),
+      link: "https://the-ronghe-edit.vercel.app/",
+      alt: "The Ronghe Edit",
+      colOrder: "text-right"
+    },
   ];
 
   const filteredProjects = useMemo(() => {
