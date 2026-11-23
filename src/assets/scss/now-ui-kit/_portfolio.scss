@@ -462,13 +462,15 @@
   margin: 0 auto;     
 }
 
+
 p a.inline-link {
-  color: #A64D79 !important;
+  color: #FF9DC6 !important;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 p a.inline-link:hover {
-  color: #7D3C98 !important;
+  color: #FFD1E5 !important;
   text-decoration: underline;
   text-underline-offset: 3px;
 }

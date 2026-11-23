@@ -67,13 +67,17 @@ function Echolab() {
             <p>using customer quotes and ticket clusters, our system generates draft hypotheses for experimentation.</p>
             <p><strong>design focus: </strong>i designed the ui and flow around how hypotheses were presented so that PMs could quickly review, refine, and decide whether to test them - treating ai output as a starting point, not a final answer.</p>
             <p><strong>decision supported: </strong>"what can we reasonably test next based on real customer pain?"</p>
-            <div className="image-wrapper">
-            <img
-              src={PainpointImage}
-              alt="Echolab Pain Points Page"
-              className="center-image"
-            />
-            </div>
+            <figure className="image-wrapper">
+              <img
+                src={PainpointImage}
+                alt="Echolab Pain Points Page"
+                className="center-image"
+              />
+              <figcaption className="project-caption">
+                customer feedback and ticket clusters provide context
+                for generating actionable, ai-powered hypotheses.
+              </figcaption>
+            </figure>
             <h4>2. filter pain points</h4>
             <p>i proposed and designed a filtering feature for the pain points dashboard, allowing product managers to sort issues by:</p>
             <ul>
@@ -84,13 +88,18 @@ function Echolab() {
             </ul>
             <p><strong>design rationale: </strong>without filtering, PMs defaulted to reacting to the loudest issues rather than the most impactful ones.</p>
             <p><strong>decision supported: </strong>"which problems deserve attention right now?"</p>
-            <div className="image-wrapper">
-            <img
-              src={Painpoints}
-              alt="Echolab Pain Points"
-              className="center-image"
-            />
-            </div>
+            <figure className="image-wrapper">
+              <img
+                src={Painpoints}
+                alt="Echolab Pain Points"
+                className="center-image"
+              />
+              <figcaption className="project-caption">
+                high-fidelity prototypes exploring filtering and sorting
+                interactions to help product managers prioritize
+                customer pain points.
+              </figcaption>
+            </figure>
             <h4>3. visualize ticket trends</h4>
             <Row style={{ marginTop: "70px"}}>
             <Col className="ml-auto mr-auto text-left" md="6">
@@ -100,11 +109,19 @@ function Echolab() {
                 <p><strong>decision supported: </strong>"is this issue getting worse, stable, or improving?"</p>
               </Col>
             <Col md="6">
-                <img src={require("assets/img/painptcard.png")} alt="Pain Point Card" className="project-img"/>
-                  <div
-                    className="image-container"
-                  ></div>
-                </Col>
+              <figure className="image-wrapper">
+                <img
+                  src={require("assets/img/painptcard.png")}
+                  alt="Pain Point Card"
+                  className="project-img"
+                />
+                <figcaption className="project-caption">
+                  a reusable pain point component that surfaces ticket
+                  volume, issue classification, and 90-day trends
+                  at a glance.
+                </figcaption>
+              </figure>
+            </Col>
             </Row>
             <h3 style={{ marginTop: "70px"}}>design process</h3>
             <DesignProcess/>
